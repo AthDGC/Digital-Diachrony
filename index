@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Development Program | Linguistics & Digital Humanities</title>
-    <meta name="description" content="Professional Development Program in Linguistics and Digital Humanities under the authority of KEDIVIM, National and Kapodistrian University of Athens.">
+    <title>Digital Diachrony | Professional Development Program</title>
+    <meta name="description" content="Digital Diachrony - Computational Approaches to Diachronic Linguistics. Professional Development Program by KEDIVIM NKUA.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,7 +99,7 @@
         /* Hero Section */
         .hero {
             /* Open Access Image: University of Athens / Neoclassical Architecture */
-            background: linear-gradient(rgba(0, 30, 60, 0.8), rgba(0, 30, 60, 0.8)), 
+            background: linear-gradient(rgba(0, 30, 60, 0.85), rgba(0, 30, 60, 0.85)), 
                         url('https://images.unsplash.com/photo-1549643276-fbc2cbd02150?q=80&w=2070&auto=format&fit=crop'); 
             background-size: cover;
             background-position: center;
@@ -110,17 +110,22 @@
 
         .hero h1 {
             color: var(--white);
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             line-height: 1.2;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-weight: 300;
+        .hero h2 {
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn {
@@ -222,12 +227,46 @@
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .module-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 600;
+        }
+
+        .module-meta {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            margin: 2rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         /* Footer */
@@ -271,9 +310,10 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 1.8rem; }
             .about-grid { grid-template-columns: 1fr; }
             .nav-wrapper { flex-direction: column; gap: 1rem; }
+            .module-header { flex-direction: column; }
         }
     </style>
 </head>
@@ -300,12 +340,37 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Professional Development Program</h1>
-            <p>Linguistics and Digital Humanities</p>
-            <p style="font-size: 1rem; margin-top: -1rem; opacity: 0.8;">KEDIVIM - National and Kapodistrian University of Athens</p>
-            <a href="mailto:nlavidas@enl.uoa.gr" class="btn">Request Information</a>
+            <h2>Professional Development Program (KEDIVIM)</h2>
+            <h1>Digital Tools for the Study of Language Evolution:<br>Digital Diachrony</h1>
+            <p>Computational Approaches to Diachronic Linguistics</p>
+            <div style="margin-top: 2rem;">
+                <a href="mailto:nlavidas@enl.uoa.gr" class="btn">Request Information</a>
+            </div>
         </div>
     </section>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>8</h3>
+                    <p>Months Duration</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>ECTS Credits</p>
+                </div>
+                <div class="stat-item">
+                    <h3>300</h3>
+                    <p>Total Hours</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Online (Asynchronous)</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="about" class="section">
         <div class="container">
@@ -313,15 +378,15 @@
                 <div class="about-text">
                     <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Program Overview</h2>
                     <p>
-                        This Professional Development Program operates under the authority of <strong>ΚΕΔΙΒΙΜ</strong> (Center for Continuing Education and Lifelong Learning) of the National and Kapodistrian University of Athens. 
+                        This program offers specialized training for philologists and researchers in modern digital methods for studying language evolution. It combines traditional linguistic analysis with computational tools, fully adopting the <strong>Open Access</strong> philosophy.
                     </p>
                     <p>
-                        It is specifically designed for professionals seeking advanced training in the intersection of <strong>linguistics</strong> and <strong>digital humanities</strong>. The curriculum integrates theoretical foundations with practical digital applications, preparing participants for the modern landscape of linguistic research and education.
+                        <strong>Target Audience:</strong> Open to philologists of all languages (Classics, Byzantine, Modern Greek, English, German, French, Spanish, Italian, etc.), educators interested in digital methods, linguistics graduate students, digital humanities researchers, and language technology professionals.
                     </p>
                     <div style="background: #f8f9fa; padding: 1.5rem; border-left: 3px solid var(--primary); margin-top: 2rem;">
                         <h4 style="margin-bottom: 0.5rem;">Ελληνικά</h4>
                         <p style="margin-bottom: 0; font-style: italic;">
-                            Πρόγραμμα συνεχούς εκπαίδευσης υπό την αιγίδα του ΚΕΔΙΒΙΜ του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών για επαγγελματίες που επιδιώκουν εξειδικευμένη κατάρτιση στη γλωσσολογία και τις ψηφιακές ανθρωπιστικές επιστήμες.
+                            Ψηφιακά Εργαλεία για τη Μελέτη της Γλωσσικής Εξέλιξης: Ψηφιακή Διαχρονία - Υπολογιστικές Προσεγγίσεις στη Διαχρονική Γλωσσολογία.
                         </p>
                     </div>
                 </div>
@@ -332,16 +397,16 @@
 
             <div class="program-highlights">
                 <div class="highlight-card">
-                    <h3><i class="fas fa-university"></i> Accreditation</h3>
-                    <p>Fully accredited by KEDIVIM, ensuring high academic standards and official certification from NKUA.</p>
+                    <h3><i class="fas fa-certificate"></i> Certification</h3>
+                    <p>Certificate of Specialized Training from KEDIVIM NKUA (Level 6 EQF).</p>
                 </div>
                 <div class="highlight-card">
-                    <h3><i class="fas fa-language"></i> Bilingual</h3>
-                    <p>Instruction and materials are available in both Greek and English to accommodate international and local professionals.</p>
+                    <h3><i class="fas fa-globe"></i> Open Access</h3>
+                    <p>All resources and tools follow the Open Access philosophy. No physical presence required.</p>
                 </div>
                 <div class="highlight-card">
-                    <h3><i class="fas fa-laptop-code"></i> Digital Focus</h3>
-                    <p>Hands-on training in digital tools, corpus linguistics, and computational methods for language analysis.</p>
+                    <h3><i class="fas fa-laptop-code"></i> Skills</h3>
+                    <p>Python/R programming, NLP tools (NLTK, spaCy), Web Scraping, and Digital Editions (TEI/XML).</p>
                 </div>
             </div>
         </div>
@@ -351,26 +416,47 @@
         <div class="container">
             <h2 class="section-title">Curriculum Structure</h2>
             <div class="modules-list">
+                
                 <div class="module-item">
                     <div class="module-header">
-                        <span class="module-title">Theoretical Linguistics</span>
+                        <span class="module-title">1. Foundations of Diachronic Linguistics</span>
+                        <span class="module-meta">60 Hours</span>
                     </div>
-                    <p>Foundations of diachronic and synchronic analysis, focusing on language change and contact phenomena.</p>
+                    <p>Mechanisms of language change, grammaticalization theories, phonetic and semantic changes. Analysis of case studies from Greek and other languages. Introduction to corpus linguistics concepts.</p>
                 </div>
 
                 <div class="module-item">
                     <div class="module-header">
-                        <span class="module-title">Digital Humanities & Tools</span>
+                        <span class="module-title">2. Computational Methods & Tools</span>
+                        <span class="module-meta">60 Hours</span>
                     </div>
-                    <p>Introduction to computational linguistics, text encoding, and digital archives.</p>
+                    <p>Python/R programming for language analysis, using NLTK/spaCy for text processing, regular expressions, and web scraping. Practical application on real language data.</p>
                 </div>
 
                 <div class="module-item">
                     <div class="module-header">
-                        <span class="module-title">Corpus Linguistics</span>
+                        <span class="module-title">3. Statistical Analysis & Modeling</span>
+                        <span class="module-meta">60 Hours</span>
                     </div>
-                    <p>Practical workshops on constructing and analyzing linguistic corpora using modern software.</p>
+                    <p>Descriptive statistics, hypothesis testing, regression analysis for linguistic phenomena. Time series models in language evolution and data visualization.</p>
                 </div>
+
+                <div class="module-item">
+                    <div class="module-header">
+                        <span class="module-title">4. Applications in Historical Languages</span>
+                        <span class="module-meta">60 Hours</span>
+                    </div>
+                    <p>Digital processing of ancient/medieval texts, OCR for old editions, polytonic Greek handling, TEI/XML encoding, and creation of digital critical editions.</p>
+                </div>
+
+                <div class="module-item">
+                    <div class="module-header">
+                        <span class="module-title">5. Research Lab</span>
+                        <span class="module-meta">60 Hours</span>
+                    </div>
+                    <p>Development of an original research project, creation of an open dataset/tool, writing a scientific paper, and presentation in conference format.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -379,17 +465,17 @@
         <div class="container">
             <h2 class="section-title">Academic Direction</h2>
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <div style="width: 150px; height: 150px; background-color: #eee; border-radius: 50%; margin: 0 auto 1.5rem; overflow: hidden;">
-                    <i class="fas fa-user-tie" style="font-size: 4rem; line-height: 150px; color: #ccc;"></i>
+                <div style="width: 150px; height: 150px; background-color: #f0f0f0; border-radius: 50%; margin: 0 auto 1.5rem; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-user-tie" style="font-size: 4rem; color: #ccc;"></i>
                 </div>
                 <h3>Prof. Nikolaos Lavidas</h3>
                 <p style="color: var(--primary); font-weight: 500;">Scientific & Academic Director</p>
                 <p style="margin-top: 1rem; color: var(--light-text);">
-                    Professor of Linguistics at the Department of English Language and Literature, National and Kapodistrian University of Athens.
+                    Professor of Diachronic Linguistics<br>Department of English Language and Literature<br>National and Kapodistrian University of Athens
                 </p>
                 <div style="margin-top: 1.5rem;">
                     <a href="https://scholar.google.com/citations?user=RH0edYcAAAAJ" target="_blank" style="margin: 0 0.5rem;"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                    <a href="https://www.researchgate.net/profile/Nikolaos-Lavidas" target="_blank" style="margin: 0 0.5rem;"><i class="fab fa-researchgate"></i> ResearchGate</a>
+                    <a href="mailto:nlavidas@enl.uoa.gr" style="margin: 0 0.5rem;"><i class="fas fa-envelope"></i> Contact</a>
                 </div>
             </div>
         </div>
