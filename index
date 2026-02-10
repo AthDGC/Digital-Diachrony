@@ -154,18 +154,6 @@
             transform: translateY(-2px);
         }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            margin-left: 1rem;
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--primary);
-        }
-
         /* Stats Bar */
         .stats-bar {
             /* LINKED TO: mohammad-rahmani-5tBqnBI7tKs-unsplash.jpg */
@@ -426,7 +414,6 @@
             <p style="font-size: 1.2rem; margin-bottom: 2rem; font-weight: 300; opacity: 0.9;">Computational Approaches to Diachronic Linguistics</p>
             <div>
                 <a href="mailto:nlavidas@enl.uoa.gr" class="btn">Apply Now</a>
-                <a href="assets/syllabus.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Syllabus</a>
             </div>
         </div>
     </section>
