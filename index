@@ -6,6 +6,8 @@
     <title>Digital Diachrony | Professional Development Program</title>
     <meta name="description" content="Digital Diachrony - Computational Approaches to Diachronic Linguistics. Professional Development Program by KEDIVIM NKUA.">
     
+    <link rel="icon" type="image/jpg" href="assets/logos/athdgc-favicon.jpg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +20,7 @@
             --secondary: #1a1a1a;
             --accent: #e6f0fa;
             --text: #333333;
-            --light-text: #666666;
+            --light-text: #555555;
             --white: #ffffff;
             --border: #e0e0e0;
         }
@@ -80,7 +82,7 @@
         }
 
         .logo-img {
-            height: 50px;
+            height: 55px;
             width: auto;
         }
 
@@ -94,161 +96,86 @@
             font-weight: 500;
             color: var(--secondary);
             font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Hero Section */
         .hero {
-            /* Open Access Image: University of Athens / Neoclassical Architecture */
-            background: linear-gradient(rgba(0, 30, 60, 0.85), rgba(0, 30, 60, 0.85)), 
-                        url('https://images.unsplash.com/photo-1549643276-fbc2cbd02150?q=80&w=2070&auto=format&fit=crop'); 
+            /* LINKED TO: jr-korpa-JXb5j1vdWSI-unsplash.jpg */
+            background: linear-gradient(rgba(0, 30, 60, 0.7), rgba(0, 30, 60, 0.7)), 
+                        url('assets/images/jr-korpa-JXb5j1vdWSI-unsplash.jpg'); 
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: var(--white);
-            padding: 6rem 0;
+            padding: 8rem 0;
             text-align: center;
         }
 
         .hero h1 {
             color: var(--white);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero h2 {
             color: #e0e0e0;
             font-family: 'Inter', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .btn {
             display: inline-block;
             background: var(--white);
             color: var(--primary);
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 4px;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: transform 0.2s ease;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--white);
         }
 
         .btn:hover {
+            background: transparent;
+            color: var(--white);
             transform: translateY(-2px);
         }
 
-        /* Main Content */
-        .section {
-            padding: 5rem 0;
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            margin-left: 1rem;
         }
 
-        .section-alt {
-            background-color: #f5f5f5;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.25rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary);
-            margin: 1rem auto 0;
-        }
-
-        /* About Grid */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            color: var(--light-text);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .program-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .highlight-card {
+        .btn-outline:hover {
             background: var(--white);
-            padding: 2rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: shadow 0.3s ease;
-        }
-
-        .highlight-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
             color: var(--primary);
-        }
-
-        /* Modules Section */
-        .modules-list {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .module-item {
-            background: var(--white);
-            border-left: 4px solid var(--primary);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-        }
-
-        .module-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.5rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .module-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .module-meta {
-            font-size: 0.9rem;
-            color: #888;
-            font-weight: 500;
         }
 
         /* Stats Bar */
         .stats-bar {
-            background: var(--primary);
+            /* LINKED TO: mohammad-rahmani-5tBqnBI7tKs-unsplash.jpg */
+            background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 77, 153, 0.9)),
+                        url('assets/images/mohammad-rahmani-5tBqnBI7tKs-unsplash.jpg'); 
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 3rem 0;
-            margin: 2rem 0;
+            padding: 4rem 0;
+            margin-bottom: 0;
         }
         
         .stats-grid {
@@ -260,21 +187,167 @@
 
         .stat-item h3 {
             color: white;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .stat-item p {
-            font-size: 1.1rem;
+            font-size: 0.85rem;
             opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-alt {
+            background-color: #f4f7f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+            margin: 1.5rem auto 0;
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            color: var(--light-text);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image img {
+            width: 100%; 
+            border-radius: 4px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .program-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .highlight-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Curriculum Section */
+        .modules-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .module-item {
+            background: var(--white);
+            border-left: 5px solid var(--primary);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .module-item:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            margin-left: 10px;
+        }
+
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .module-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .module-meta {
+            font-size: 0.9rem;
+            color: var(--white);
+            background: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Faculty Section */
+        .faculty-card {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+        }
+
+        .director-img-container {
+            width: 180px; 
+            height: 180px; 
+            border-radius: 50%; 
+            margin: 0 auto 2rem; 
+            overflow: hidden; 
+            border: 5px solid var(--accent);
         }
 
         /* Footer */
         footer {
-            background: var(--secondary);
+            background: #111;
             color: var(--white);
-            padding: 4rem 0 2rem;
-            margin-top: auto;
+            padding: 5rem 0 2rem;
         }
 
         .footer-content {
@@ -282,27 +355,33 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         .footer-logos {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            background: rgba(255,255,255,0.05);
-            padding: 1.5rem;
-            border-radius: 8px;
+            gap: 3rem;
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,0.03);
+            padding: 2rem 4rem;
+            border-radius: 12px;
+            flex-wrap: wrap;
         }
 
         .footer-logo {
-            height: 60px;
+            height: 80px;
             width: auto;
-            filter: brightness(0) invert(1);
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .footer-logo:hover {
+            opacity: 1;
         }
 
         .copyright {
-            color: #888;
+            color: #666;
             font-size: 0.9rem;
             border-top: 1px solid #333;
             padding-top: 2rem;
@@ -310,10 +389,12 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2.2rem; }
             .about-grid { grid-template-columns: 1fr; }
             .nav-wrapper { flex-direction: column; gap: 1rem; }
-            .module-header { flex-direction: column; }
+            .module-header { flex-direction: column; align-items: flex-start; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .footer-logos { flex-direction: column; padding: 2rem; }
         }
     </style>
 </head>
@@ -323,7 +404,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-group">
-                    <img src="assets/logos/nkua.jpg" alt="National and Kapodistrian University of Athens" class="logo-img">
+                    <img src="assets/logos/EKPA.jpg" alt="National and Kapodistrian University of Athens" class="logo-img">
                     <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC" class="logo-img">
                 </div>
                 <nav>
@@ -342,9 +423,10 @@
         <div class="container">
             <h2>Professional Development Program (KEDIVIM)</h2>
             <h1>Digital Tools for the Study of Language Evolution:<br>Digital Diachrony</h1>
-            <p>Computational Approaches to Diachronic Linguistics</p>
-            <div style="margin-top: 2rem;">
-                <a href="mailto:nlavidas@enl.uoa.gr" class="btn">Request Information</a>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; font-weight: 300; opacity: 0.9;">Computational Approaches to Diachronic Linguistics</p>
+            <div>
+                <a href="mailto:nlavidas@enl.uoa.gr" class="btn">Apply Now</a>
+                <a href="assets/syllabus.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Syllabus</a>
             </div>
         </div>
     </section>
@@ -376,37 +458,37 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Program Overview</h2>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Bridging Philology & Technology</h2>
                     <p>
-                        This program offers specialized training for philologists and researchers in modern digital methods for studying language evolution. It combines traditional linguistic analysis with computational tools, fully adopting the <strong>Open Access</strong> philosophy.
+                        This program offers specialized training for philologists and researchers in modern digital methods for studying language evolution. It uniquely combines traditional linguistic analysis with cutting-edge computational tools, fully adopting the <strong>Open Access</strong> philosophy.
                     </p>
                     <p>
-                        <strong>Target Audience:</strong> Open to philologists of all languages (Classics, Byzantine, Modern Greek, English, German, French, Spanish, Italian, etc.), educators interested in digital methods, linguistics graduate students, digital humanities researchers, and language technology professionals.
+                        <strong>Target Audience:</strong> Open to philologists of all languages (Classics, Byzantine, Modern Greek, English, German, French, Spanish, Italian, etc.), educators, linguistics graduate students, digital humanities researchers, and language technology professionals.
                     </p>
-                    <div style="background: #f8f9fa; padding: 1.5rem; border-left: 3px solid var(--primary); margin-top: 2rem;">
-                        <h4 style="margin-bottom: 0.5rem;">Ελληνικά</h4>
-                        <p style="margin-bottom: 0; font-style: italic;">
-                            Ψηφιακά Εργαλεία για τη Μελέτη της Γλωσσικής Εξέλιξης: Ψηφιακή Διαχρονία - Υπολογιστικές Προσεγγίσεις στη Διαχρονική Γλωσσολογία.
+                    <div style="background: #f0f4f8; padding: 2rem; border-left: 4px solid var(--primary); margin-top: 2rem; border-radius: 0 8px 8px 0;">
+                        <h4 style="margin-bottom: 1rem; color: var(--primary);">Ελληνικά</h4>
+                        <p style="margin-bottom: 0; font-style: italic; color: #555;">
+                            "Ψηφιακά Εργαλεία για τη Μελέτη της Γλωσσικής Εξέλιξης: Ψηφιακή Διαχρονία - Υπολογιστικές Προσεγγίσεις στη Διαχρονική Γλωσσολογία."
                         </p>
                     </div>
                 </div>
                 <div class="about-image">
-                     <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop" alt="Academic Study Environment" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                     <img src="assets/images/rob-wingate-mbI8g2CaLYo-unsplash.jpg" alt="Classical Library and Study">
                 </div>
             </div>
 
             <div class="program-highlights">
                 <div class="highlight-card">
                     <h3><i class="fas fa-certificate"></i> Certification</h3>
-                    <p>Certificate of Specialized Training from KEDIVIM NKUA (Level 6 EQF).</p>
+                    <p>Certificate of Specialized Training from KEDIVIM NKUA (Level 6 EQF), recognized internationally.</p>
                 </div>
                 <div class="highlight-card">
                     <h3><i class="fas fa-globe"></i> Open Access</h3>
-                    <p>All resources and tools follow the Open Access philosophy. No physical presence required.</p>
+                    <p>All resources, datasets, and tools follow the Open Access philosophy. Zero cost for software materials.</p>
                 </div>
                 <div class="highlight-card">
-                    <h3><i class="fas fa-laptop-code"></i> Skills</h3>
-                    <p>Python/R programming, NLP tools (NLTK, spaCy), Web Scraping, and Digital Editions (TEI/XML).</p>
+                    <h3><i class="fas fa-laptop-code"></i> Practical Skills</h3>
+                    <p>Hands-on training in Python/R, NLP tools (NLTK, spaCy), Web Scraping, and Digital Editions (XML/TEI).</p>
                 </div>
             </div>
         </div>
@@ -464,18 +546,18 @@
     <section id="faculty" class="section">
         <div class="container">
             <h2 class="section-title">Academic Direction</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <div style="width: 150px; height: 150px; background-color: #f0f0f0; border-radius: 50%; margin: 0 auto 1.5rem; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-user-tie" style="font-size: 4rem; color: #ccc;"></i>
+            <div class="faculty-card">
+                <div class="director-img-container">
+                    <img src="assets/images/skyler-gerald-LELdt4_KU4Y-unsplash.jpg" alt="Prof. Nikolaos Lavidas" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3>Prof. Nikolaos Lavidas</h3>
-                <p style="color: var(--primary); font-weight: 500;">Scientific & Academic Director</p>
-                <p style="margin-top: 1rem; color: var(--light-text);">
+                <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Scientific & Academic Director</p>
+                <p style="margin-bottom: 2rem; color: #666;">
                     Professor of Diachronic Linguistics<br>Department of English Language and Literature<br>National and Kapodistrian University of Athens
                 </p>
-                <div style="margin-top: 1.5rem;">
-                    <a href="https://scholar.google.com/citations?user=RH0edYcAAAAJ" target="_blank" style="margin: 0 0.5rem;"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                    <a href="mailto:nlavidas@enl.uoa.gr" style="margin: 0 0.5rem;"><i class="fas fa-envelope"></i> Contact</a>
+                <div>
+                    <a href="https://scholar.google.com/citations?user=RH0edYcAAAAJ" target="_blank" class="btn btn-outline" style="background: var(--primary); border: none; margin: 0 5px;"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="mailto:nlavidas@enl.uoa.gr" class="btn btn-outline" style="background: var(--secondary); border: none; margin: 0 5px;"><i class="fas fa-envelope"></i> Contact</a>
                 </div>
             </div>
         </div>
@@ -485,15 +567,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logos">
-                    <img src="assets/logos/nkua.jpg" alt="NKUA" class="footer-logo">
-                    <img src="assets/logos/elidek_logo_en.png" alt="HFRI" class="footer-logo">
+                    <img src="assets/logos/EKPA.jpg" alt="NKUA" class="footer-logo">
                     <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC" class="footer-logo">
                 </div>
                 
                 <div class="contact-info">
                     <h3>Contact Us</h3>
-                    <p>Department of English Language and Literature</p>
-                    <p>National and Kapodistrian University of Athens</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Department of English Language and Literature</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">National and Kapodistrian University of Athens</p>
                     <p><a href="mailto:nlavidas@enl.uoa.gr" style="color: var(--white); text-decoration: underline;">nlavidas@enl.uoa.gr</a></p>
                 </div>
 
