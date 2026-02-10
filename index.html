@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,8 @@
         }
 
         /* Language Switching Logic */
-        body.lang-en .show-gr { display: none !important; }
         body.lang-gr .show-en { display: none !important; }
+        body.lang-en .show-gr { display: none !important; }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
@@ -92,28 +92,27 @@
         /* --- NEW HERO SECTION DESIGN --- */
         .hero {
             position: relative;
-            /* Using Direct Unsplash Link for Reliability (Library/Computer) */
-            background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            /* IMAGE: High Quality Library/Tech vibe from Unsplash (Direct Link) */
+            background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            padding: 9rem 0; /* Taller hero */
+            padding: 10rem 0;
             text-align: center;
             color: white;
         }
 
-        /* Dark Overlay */
+        /* Dark Overlay for Readability */
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 15, 30, 0.85), rgba(0, 40, 80, 0.75));
+            background: linear-gradient(to bottom, rgba(4, 28, 56, 0.85), rgba(0, 15, 30, 0.8));
             z-index: 1;
         }
 
         .hero .container { position: relative; z-index: 2; }
 
-        /* Hero Text Styling */
         .hero h2 {
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
@@ -121,7 +120,7 @@
             color: #80ccff;
             margin-bottom: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .hero h1 {
@@ -199,7 +198,7 @@
             display: block; 
             margin-bottom: 0.5rem; 
             font-size: 1.1rem; 
-            text-transform: uppercase; /* No accents ensured in HTML */
+            text-transform: uppercase; 
         }
 
         /* Modules */
@@ -216,13 +215,13 @@
 
         @media (max-width: 768px) {
             .about-content { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2rem; }
+            .hero h1 { font-size: 1.8rem; }
             .nav-wrapper { flex-direction: column; gap: 1rem; }
             .nav-right { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
-<body class="lang-en"> <header>
+<body class="lang-gr"> <header>
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-group">
@@ -232,14 +231,14 @@
                 <div class="nav-right">
                     <nav>
                         <ul>
-                            <li><a href="#about" class="show-en">Overview</a><a href="#about" class="show-gr">ΕΠΙΣΚΟΠΗΣΗ</a></li>
-                            <li><a href="#curriculum" class="show-en">Modules</a><a href="#curriculum" class="show-gr">ΕΝΟΤΗΤΕΣ</a></li>
-                            <li><a href="#contact" class="show-en">Contact</a><a href="#contact" class="show-gr">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+                            <li><a href="#about" class="show-gr">ΕΠΙΣΚΟΠΗΣΗ</a><a href="#about" class="show-en">Overview</a></li>
+                            <li><a href="#curriculum" class="show-gr">ΕΝΟΤΗΤΕΣ</a><a href="#curriculum" class="show-en">Modules</a></li>
+                            <li><a href="#contact" class="show-gr">ΕΠΙΚΟΙΝΩΝΙΑ</a><a href="#contact" class="show-en">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="lang-switch">
-                        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
-                        <button class="lang-btn" id="btn-gr" onclick="setLanguage('gr')">GR</button>
+                        <button class="lang-btn active" id="btn-gr" onclick="setLanguage('gr')">GR</button>
+                        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
                     </div>
                 </div>
             </div>
@@ -248,18 +247,17 @@
 
     <section class="hero">
         <div class="container">
-            <h2 class="show-en">Professional Development Program (KEDIVIM)</h2>
             <h2 class="show-gr">ΠΡΟΓΡΑΜΜΑ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΑΝΑΠΤΥΞΗΣ (ΚΕΔΙΒΙΜ)</h2>
-            
-            <h1 class="show-en">Digital Tools for the Study of Language Evolution</h1>
             <h1 class="show-gr">ΨΗΦΙΑΚΑ ΕΡΓΑΛΕΙΑ ΓΙΑ ΤΗ ΜΕΛΕΤΗ ΤΗΣ ΓΛΩΣΣΙΚΗΣ ΕΞΕΛΙΞΗΣ</h1>
-
-            <p class="hero-subtitle show-en">Digital Diachrony: Computational Approaches to Linguistics</p>
             <p class="hero-subtitle show-gr">Ψηφιακή Διαχρονία: Υπολογιστικές Προσεγγίσεις στη Γλωσσολογία</p>
             
+            <h2 class="show-en">Professional Development Program (KEDIVIM)</h2>
+            <h1 class="show-en">Digital Tools for the Study of Language Evolution</h1>
+            <p class="hero-subtitle show-en">Digital Diachrony: Computational Approaches to Linguistics</p>
+            
             <div class="cta-box">
-                <p class="show-en"><i class="fas fa-bullhorn"></i> Deadline to be announced</p>
                 <p class="show-gr"><i class="fas fa-bullhorn"></i> Η ΠΡΟΘΕΣΜΙΑ ΘΑ ΑΝΑΚΟΙΝΩΘΕΙ</p>
+                <p class="show-en"><i class="fas fa-bullhorn"></i> Deadline to be announced</p>
                 <a href="mailto:nlavidas@enl.uoa.gr">nlavidas@enl.uoa.gr</a>
             </div>
         </div>
@@ -270,19 +268,19 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>8</h3>
-                    <p class="show-en">Months Duration</p><p class="show-gr">ΜΗΝΕΣ ΔΙΑΡΚΕΙΑ</p>
+                    <p class="show-gr">ΜΗΝΕΣ ΔΙΑΡΚΕΙΑ</p><p class="show-en">Months Duration</p>
                 </div>
                 <div class="stat-item">
                     <h3>12</h3>
-                    <p class="show-en">ECTS Credits</p><p class="show-gr">ΜΟΝΑΔΕΣ ECTS</p>
+                    <p class="show-gr">ΜΟΝΑΔΕΣ ECTS</p><p class="show-en">ECTS Credits</p>
                 </div>
                 <div class="stat-item">
                     <h3>300</h3>
-                    <p class="show-en">Total Hours</p><p class="show-gr">ΩΡΕΣ ΣΥΝΟΛΟ</p>
+                    <p class="show-gr">ΩΡΕΣ ΣΥΝΟΛΟ</p><p class="show-en">Total Hours</p>
                 </div>
                 <div class="stat-item">
-                    <h3 class="show-en">Online</h3><h3 class="show-gr">Online</h3>
-                    <p class="show-en">Asynchronous</p><p class="show-gr">ΑΣΥΓΧΡΟΝΗ ΕΚΠΑΙΔΕΥΣΗ</p>
+                    <h3 class="show-gr">Online</h3><h3 class="show-en">Online</h3>
+                    <p class="show-gr">ΑΣΥΓΧΡΟΝΗ ΕΚΠΑΙΔΕΥΣΗ</p><p class="show-en">Asynchronous</p>
                 </div>
             </div>
         </div>
@@ -290,19 +288,11 @@
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title show-en">Program Overview</h2>
             <h2 class="section-title show-gr">ΕΠΙΣΚΟΠΗΣΗ ΠΡΟΓΡΑΜΜΑΤΟΣ</h2>
+            <h2 class="section-title show-en">Program Overview</h2>
             
             <div class="about-content">
                 <div class="about-text">
-                    <div class="show-en">
-                        <p>This program offers specialized training for philologists and researchers in modern digital methods for studying language evolution. It uniquely combines traditional linguistic analysis with cutting-edge computational tools, fully adopting the <strong>Open Access</strong> philosophy.</p>
-                        <p>Participants will gain practical skills in programming and data analysis, enabling them to handle large corpora of historical texts.</p>
-                        <div class="audience-box">
-                            <strong>Target Audience</strong>
-                            Open to philologists of all languages (Classics, Byzantine, Modern Greek, English, German, French, Spanish, Italian, etc.), educators, linguistics graduate students, digital humanities researchers, and language technology professionals.
-                        </div>
-                    </div>
                     
                     <div class="show-gr">
                         <p>Το πρόγραμμα προσφέρει εξειδικευμένη κατάρτιση σε φιλολόγους και ερευνητές στις σύγχρονες ψηφιακές μεθόδους μελέτης της γλωσσικής εξέλιξης. Συνδυάζει μοναδικά την παραδοσιακή γλωσσολογική ανάλυση με υπολογιστικά εργαλεία αιχμής, υιοθετώντας πλήρως τη φιλοσοφία της <strong>Ανοικτής Πρόσβασης</strong>.</p>
@@ -312,9 +302,19 @@
                             Σε φιλολόγους όλων των γλωσσών (Κλασικής, Βυζαντινής, Νεοελληνικής, Αγγλικής, Γερμανικής, Γαλλικής κ.ά.), εκπαιδευτικούς, μεταπτυχιακούς φοιτητές γλωσσολογίας και ερευνητές ψηφιακών ανθρωπιστικών επιστημών.
                         </div>
                     </div>
+
+                    <div class="show-en">
+                        <p>This program offers specialized training for philologists and researchers in modern digital methods for studying language evolution. It uniquely combines traditional linguistic analysis with cutting-edge computational tools, fully adopting the <strong>Open Access</strong> philosophy.</p>
+                        <p>Participants will gain practical skills in programming and data analysis, enabling them to handle large corpora of historical texts.</p>
+                        <div class="audience-box">
+                            <strong>Target Audience</strong>
+                            Open to philologists of all languages (Classics, Byzantine, Modern Greek, English, German, French, Spanish, Italian, etc.), educators, linguistics graduate students, digital humanities researchers, and language technology professionals.
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="History and Digital Art">
+                    <img src="https://images.unsplash.com/photo-1544256718-3bcf237f38b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Linguistics and Technology">
                 </div>
             </div>
         </div>
@@ -322,67 +322,67 @@
 
     <section id="curriculum" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title show-en">Thematic Units</h2>
             <h2 class="section-title show-gr">ΘΕΜΑΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</h2>
+            <h2 class="section-title show-en">Thematic Units</h2>
             
             <div class="module-card">
                 <div class="module-header">
                     <div class="module-title">
+                        <h3 class="show-gr">1. Θεμέλια της Διαχρονικής Γλωσσολογίας</h3>
                         <h3 class="show-en">1. Foundations of Diachronic Linguistics</h3>
-                        <h3 class="show-gr">1. ΘΕΜΕΛΙΑ ΤΗΣ ΔΙΑΧΡΟΝΙΚΗΣ ΓΛΩΣΣΟΛΟΓΙΑΣ</h3>
                     </div>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-en">Mechanisms of language change, grammaticalization theories, phonetic and semantic changes. Analysis of case studies from Greek and other languages.</p>
                 <p class="show-gr">Μηχανισμοί γλωσσικής αλλαγής, θεωρίες γραμματικοποίησης, φωνητικές και σημασιολογικές αλλαγές. Ανάλυση μελετών περίπτωσης από την Ελληνική και άλλες γλώσσες.</p>
+                <p class="show-en">Mechanisms of language change, grammaticalization theories, phonetic and semantic changes. Analysis of case studies from Greek and other languages.</p>
             </div>
 
             <div class="module-card">
                 <div class="module-header">
                     <div class="module-title">
+                        <h3 class="show-gr">2. Υπολογιστικές Μέθοδοι & Εργαλεία</h3>
                         <h3 class="show-en">2. Computational Methods & Tools</h3>
-                        <h3 class="show-gr">2. ΥΠΟΛΟΓΙΣΤΙΚΕΣ ΜΕΘΟΔΟΙ & ΕΡΓΑΛΕΙΑ</h3>
                     </div>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-en">Python/R programming for language analysis, using NLTK/spaCy for text processing, regular expressions, and web scraping.</p>
                 <p class="show-gr">Προγραμματισμός Python/R για γλωσσική ανάλυση, χρήση NLTK/spaCy για επεξεργασία κειμένου, κανονικές εκφράσεις και ανάκτηση δεδομένων ιστού (web scraping).</p>
+                <p class="show-en">Python/R programming for language analysis, using NLTK/spaCy for text processing, regular expressions, and web scraping.</p>
             </div>
 
             <div class="module-card">
                 <div class="module-header">
                     <div class="module-title">
+                        <h3 class="show-gr">3. Στατιστική Ανάλυση & Μοντελοποίηση</h3>
                         <h3 class="show-en">3. Statistical Analysis & Modeling</h3>
-                        <h3 class="show-gr">3. ΣΤΑΤΙΣΤΙΚΗ ΑΝΑΛΥΣΗ & ΜΟΝΤΕΛΟΠΟΙΗΣΗ</h3>
                     </div>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-en">Descriptive statistics, hypothesis testing, regression analysis for linguistic phenomena. Time series models in language evolution.</p>
                 <p class="show-gr">Περιγραφική στατιστική, έλεγχος υποθέσεων, ανάλυση παλινδρόμησης για γλωσσικά φαινόμενα. Μοντέλα χρονοσειρών στη γλωσσική εξέλιξη.</p>
+                <p class="show-en">Descriptive statistics, hypothesis testing, regression analysis for linguistic phenomena. Time series models in language evolution.</p>
             </div>
 
             <div class="module-card">
                 <div class="module-header">
                     <div class="module-title">
+                        <h3 class="show-gr">4. Εφαρμογές σε Ιστορικές Γλώσσες</h3>
                         <h3 class="show-en">4. Applications in Historical Languages</h3>
-                        <h3 class="show-gr">4. ΕΦΑΡΜΟΓΕΣ ΣΕ ΙΣΤΟΡΙΚΕΣ ΓΛΩΣΣΕΣ</h3>
                     </div>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-en">Digital processing of ancient texts, OCR for old editions, polytonic Greek handling, TEI/XML encoding, and creation of digital critical editions.</p>
                 <p class="show-gr">Ψηφιακή επεξεργασία αρχαίων κειμένων, OCR για παλιές εκδόσεις, διαχείριση πολυτονικών ελληνικών, κωδικοποίηση TEI/XML και δημιουργία ψηφιακών κριτικών εκδόσεων.</p>
+                <p class="show-en">Digital processing of ancient texts, OCR for old editions, polytonic Greek handling, TEI/XML encoding, and creation of digital critical editions.</p>
             </div>
 
             <div class="module-card">
                 <div class="module-header">
                     <div class="module-title">
+                        <h3 class="show-gr">5. Ερευνητικό Εργαστήριο</h3>
                         <h3 class="show-en">5. Research Lab</h3>
-                        <h3 class="show-gr">5. ΕΡΕΥΝΗΤΙΚΟ ΕΡΓΑΣΤΗΡΙΟ</h3>
                     </div>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-en">Development of an original research project, creation of an open dataset/tool, writing a scientific paper, and presentation in conference format.</p>
                 <p class="show-gr">Ανάπτυξη πρωτότυπου ερευνητικού έργου, δημιουργία ανοικτού συνόλου δεδομένων/εργαλείου, συγγραφή επιστημονικής εργασίας και παρουσίαση σε μορφή συνεδρίου.</p>
+                <p class="show-en">Development of an original research project, creation of an open dataset/tool, writing a scientific paper, and presentation in conference format.</p>
             </div>
 
         </div>
@@ -398,7 +398,7 @@
             <p style="margin-top: 2rem; color: #fff;"><strong>National and Kapodistrian University of Athens</strong><br>Department of English Language and Literature</p>
             
             <p style="margin-top: 1rem; font-size: 0.95rem;">
-                <span class="show-en">Scientific Responsible:</span><span class="show-gr">ΕΠΙΣΤΗΜΟΝΙΚΟΣ ΥΠΕΥΘΥΝΟΣ:</span><br>
+                <span class="show-gr">ΕΠΙΣΤΗΜΟΝΙΚΟΣ ΥΠΕΥΘΥΝΟΣ:</span><span class="show-en">Scientific Responsible:</span><br>
                 <strong style="color: white;">Prof. Nikolaos Lavidas</strong>
             </p>
             
