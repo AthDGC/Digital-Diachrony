@@ -62,14 +62,31 @@
         }
 
         .logo-group { display: flex; align-items: center; gap: 1.5rem; }
-        .logo-group img { height: 60px; width: auto; }
+        .logo-group a { display: block; line-height: 0; }
+        .logo-group img { height: 60px; width: auto; border: none; }
 
         nav ul { display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0; }
         nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
 
-        .lang-switch { border: 1px solid #ddd; border-radius: 2px; overflow: hidden; display: flex; margin-left: 2rem; }
-        .lang-btn { background: var(--white); border: none; padding: 6px 14px; cursor: pointer; font-weight: 700; font-size: 0.7rem; transition: 0.3s; }
+        /* Διόρθωση ορθογωνίου στα κουμπιά γλώσσας */
+        .lang-switch { 
+            border: 1px solid #ddd; 
+            display: inline-flex; 
+            margin-left: 2rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .lang-btn { 
+            background: var(--white); 
+            border: none; 
+            padding: 8px 16px; 
+            cursor: pointer; 
+            font-weight: 700; 
+            font-size: 0.75rem; 
+            transition: 0.3s;
+            outline: none;
+        }
         .lang-btn.active { background: var(--primary); color: var(--white); }
 
         /* --- HERO --- */
@@ -97,7 +114,7 @@
             font-size: 3.5rem; 
             margin-bottom: 1.5rem; 
             color: var(--white);
-            text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.9);
             line-height: 1.2;
         }
         
@@ -105,7 +122,7 @@
             font-size: 1.6rem; 
             color: var(--accent); 
             margin-bottom: 4rem;
-            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
             font-weight: 400;
         }
 
@@ -122,7 +139,7 @@
             transition: 0.4s;
             border: 1px solid var(--accent);
         }
-        .btn-cta:hover { background: var(--white); color: var(--primary); }
+        .btn-cta:hover { background: var(--white); color: var(--primary); border-color: var(--primary); }
 
         /* --- STATS --- */
         .stats { background: var(--secondary); color: var(--white); padding: 5rem 0; border-bottom: 5px solid var(--primary); }
@@ -150,7 +167,7 @@
         .cert-card h3 { color: var(--white); margin-bottom: 2rem; }
         .cert-list { list-style: none; padding: 0; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
         .cert-list li { display: flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; }
-        .cert-list i { color: var(--accent); }
+        .cert-list i { color: var(--accent); font-size: 1.4rem; }
 
         /* --- MODULES --- */
         .module-list { max-width: 1000px; margin: 0 auto; }
@@ -162,8 +179,10 @@
 
         /* --- FOOTER --- */
         footer { background: #000b1a; color: #a0aec0; padding: 8rem 0 4rem; text-align: center; }
-        .footer-logos { margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; }
-        .footer-logos img { height: 80px; filter: grayscale(1) brightness(10); opacity: 0.8; }
+        .footer-logos { margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; align-items: center; }
+        .footer-logos a { display: inline-block; transition: 0.3s; }
+        .footer-logos a:hover { transform: translateY(-5px); opacity: 1 !important; }
+        .footer-logos img { height: 80px; filter: brightness(0) invert(1); opacity: 0.8; border: none; }
         .footer-info p { margin: 0.8rem 0; font-size: 1.1rem; }
 
         @media (max-width: 900px) {
@@ -179,8 +198,12 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-group">
-                    <img src="assets/logos/EKPA.jpg" alt="ΕΚΠΑ">
-                    <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
+                    <a href="https://www.uoa.gr" target="_blank">
+                        <img src="assets/logos/EKPA.jpg" alt="ΕΚΠΑ">
+                    </a>
+                    <a href="https://athdgc.enl.uoa.gr" target="_blank">
+                        <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
+                    </a>
                 </div>
                 <div class="nav-right">
                     <nav>
@@ -234,19 +257,19 @@
             <div class="about-content">
                 <div class="about-text">
                     <div class="show-gr">
-                        <p>Το πρόγραμμα «Ψηφιακή Διαχρονία» επικεντρώνεται στην ανάλυση της γλωσσικής μεταβολής μέσω σύγχρονων ψηφιακών μεθοδολογιών. Στόχος είναι η εξοικείωση των εκπαιδευόμενων με τα εργαλεία των <strong>Ψηφιακών Ανθρωπιστικών Επιστημών</strong> (Digital Humanities).</p>
-                        <p>Μέσω της χρήσης υπολογιστικών σωμάτων κειμένων, οι συμμετέχοντες αναπτύσσουν δεξιότητες στη στατιστική επεξεργασία και την υπολογιστική μοντελοποίηση, εφαρμόζοντας τις αρχές της <strong>Ανοικτής Πρόσβασης</strong> στην έρευνα.</p>
+                        <p>Το πρόγραμμα «Ψηφιακή Διαχρονία» εστιάζει στην ανάλυση της γλωσσικής μεταβολής μέσω σύγχρονων ψηφιακών μεθοδολογιών. Οι εκπαιδευόμενοι αποκτούν εξειδίκευση στα εργαλεία των <strong>Ψηφιακών Ανθρωπιστικών Επιστημών</strong>, συνδυάζοντας τη γλωσσολογική θεωρία με την υπολογιστική πράξη.</p>
+                        <p>Η χρήση μεγάλων σωμάτων κειμένων και η εφαρμογή στατιστικών μοντέλων επιτρέπει την εξαγωγή ασφαλών συμπερασμάτων για τη δυναμική εξέλιξη των γλωσσών, ακολουθώντας τις αρχές της <strong>Ανοικτής Επιστήμης</strong>.</p>
                         <div class="audience-box">
                             <strong>ΟΜΑΔΑ ΣΤΟΧΟΣ</strong>
-                            Απευθύνεται σε φιλολόγους, γλωσσολόγους, ερευνητές και εκπαιδευτικούς που επιδιώκουν την επαγγελματική εξειδίκευση στις νέες τεχνολογίες ανάλυσης κειμενικών δεδομένων.
+                            Απευθύνεται σε φιλολόγους, γλωσσολόγους, ιστορικούς, ερευνητές και εκπαιδευτικούς που επιθυμούν να αναπτύξουν τεχνολογικές δεξιότητες αιχμής για την ανάλυση κειμένων.
                         </div>
                     </div>
                     <div class="show-en">
-                        <p>The "Digital Diachrony" program focuses on analyzing linguistic change using modern digital methodologies. The goal is to familiarize learners with <strong>Digital Humanities</strong> tools.</p>
-                        <p>Through computational corpora, participants develop skills in statistical processing and computational modeling, applying <strong>Open Access</strong> principles to research.</p>
+                        <p>The "Digital Diachrony" program focuses on analyzing linguistic change through modern digital methodologies. Learners specialize in <strong>Digital Humanities</strong> tools, combining linguistic theory with computational practice.</p>
+                        <p>The use of large corpora and the application of statistical models allow for reliable conclusions on the dynamic evolution of languages, following <strong>Open Science</strong> principles.</p>
                         <div class="audience-box">
                             <strong>TARGET GROUP</strong>
-                            Aimed at philologists, linguists, researchers, and educators seeking professional specialization in new text data analysis technologies.
+                            Aimed at philologists, linguists, historians, researchers, and educators seeking to develop cutting-edge technological skills for text analysis.
                         </div>
                     </div>
                 </div>
@@ -262,9 +285,9 @@
                 <h3 class="show-gr">ΠΙΣΤΟΠΟΙΗΣΗ & ΔΙΠΛΩΜΑ</h3>
                 <h3 class="show-en">CERTIFICATION & DIPLOMA</h3>
                 <ul class="cert-list">
-                    <li><i class="fas fa-certificate"></i> <span class="show-gr">Πιστοποιητικό Επιμόρφωσης ΕΚΠΑ</span><span class="show-en">NKUA Training Certificate</span></li>
-                    <li><i class="fas fa-file-invoice"></i> <span class="show-gr">Συμπλήρωμα Διπλώματος (Europass)</span><span class="show-en">Diploma Supplement (Europass)</span></li>
-                    <li><i class="fas fa-graduation-cap"></i> <span class="show-gr">Ακαδημαϊκές Μονάδες ECTS</span><span class="show-en">Academic ECTS Credits</span></li>
+                    <li><i class="fas fa-file-contract"></i> <span class="show-gr">Πιστοποιητικό Επιμόρφωσης ΕΚΠΑ</span><span class="show-en">NKUA Training Certificate</span></li>
+                    <li><i class="fas fa-id-card"></i> <span class="show-gr">Συμπλήρωμα Διπλώματος (Europass)</span><span class="show-en">Diploma Supplement (Europass)</span></li>
+                    <li><i class="fas fa-award"></i> <span class="show-gr">Ακαδημαϊκές Μονάδες ECTS</span><span class="show-en">Academic ECTS Credits</span></li>
                 </ul>
             </div>
         </div>
@@ -277,52 +300,65 @@
             
             <div class="module-list">
                 <div class="module-card">
-                    <i class="fas fa-landmark"></i>
+                    <i class="fas fa-scroll"></i>
                     <div class="module-header">
                         <h3 class="show-gr">1. Διαχρονική & Ιστορική Γλωσσολογία</h3>
                         <h3 class="show-en">1. Diachronic & Historical Linguistics</h3>
                         <span class="hours">60 ΩΡΕΣ / HOURS</span>
                     </div>
-                    <p class="show-gr">Θεωρητικά μοντέλα γλωσσικής μεταβολής, γραμματικοποίηση και ανάλυση ιστορικών κειμένων της Ελληνικής.</p>
-                    <p class="show-en">Theoretical models of language change, grammaticalization, and analysis of Greek historical texts.</p>
+                    <p class="show-gr">Μελέτη των μηχανισμών γλωσσικής μεταβολής, θεωρίες γραμματικοποίησης και ανάλυση ιστορικών κειμένων της Ελληνικής γλώσσας από όλες τις περιόδους.</p>
+                    <p class="show-en">Study of linguistic change mechanisms, grammaticalization theories, and analysis of Greek historical texts from all periods.</p>
                 </div>
 
                 <div class="module-card">
-                    <i class="fas fa-code"></i>
+                    <i class="fas fa-laptop-code"></i>
                     <div class="module-header">
-                        <h3 class="show-gr">2. Υπολογιστικές Μέθοδοι & Python</h3>
+                        <h3 class="show-gr">2. Υπολογιστικές Μέθοδοι & Γλώσσα Python</h3>
                         <h3 class="show-en">2. Computational Methods & Python</h3>
                         <span class="hours">60 ΩΡΕΣ / HOURS</span>
                     </div>
-                    <p class="show-gr">Εισαγωγή στον προγραμματισμό για γλωσσολόγους, επεξεργασία φυσικής γλώσσας (NLP) και εξόρυξη δεδομένων.</p>
-                    <p class="show-en">Introduction to programming for linguists, Natural Language Processing (NLP), and data mining.</p>
+                    <p class="show-gr">Εισαγωγή στον προγραμματισμό για τις ανθρωπιστικές επιστήμες, επεξεργασία φυσικής γλώσσας (NLP) και χρήση εξειδικευμένων βιβλιοθηκών για ανάλυση κειμένων.</p>
+                    <p class="show-en">Introduction to programming for humanities, Natural Language Processing (NLP), and use of specialized libraries for text analysis.</p>
                 </div>
 
                 <div class="module-card">
-                    <i class="fas fa-chart-bar"></i>
+                    <i class="fas fa-microscope"></i>
                     <div class="module-header">
-                        <h3 class="show-gr">3. Στατιστική & Ερευνητικό Εργαστήριο</h3>
-                        <h3 class="show-en">3. Statistics & Research Lab</h3>
+                        <h3 class="show-gr">3. Ποσοτική Ανάλυση & Ερευνητική Πρακτική</h3>
+                        <h3 class="show-en">3. Quantitative Analysis & Research Practice</h3>
                         <span class="hours">60 ΩΡΕΣ / HOURS</span>
                     </div>
-                    <p class="show-gr">Ποσοτική ανάλυση γλωσσικών δεδομένων και εκπόνηση τελικής ερευνητικής εργασίας (Capstone Project).</p>
-                    <p class="show-en">Quantitative analysis of linguistic data and completion of the final Capstone Project.</p>
+                    <p class="show-gr">Στατιστική επεξεργασία γλωσσικών δεδομένων και εκπόνηση πρωτότυπης ερευνητικής εργασίας με τη χρήση ψηφιακών εργαλείων.</p>
+                    <p class="show-en">Statistical processing of linguistic data and completion of an original research project using digital tools.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-logos">
-                <img src="assets/logos/EKPA.jpg" alt="NKUA">
-                <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
+                <a href="https://www.uoa.gr" target="_blank">
+                    <img src="assets/logos/EKPA.jpg" alt="NKUA">
+                </a>
+                <a href="https://athdgc.enl.uoa.gr" target="_blank">
+                    <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
+                </a>
             </div>
             <div class="footer-info">
                 <p><strong>ΕΘΝΙΚΟ ΚΑΙ ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ</strong></p>
-                <p>Τμήμα Αγγλικής Γλώσσας και Φιλολογίας</p>
-                <p style="color:var(--white); margin-top:2.5rem;">Επιστημονικός Υπεύθυνος: <strong>Καθηγητής Νικόλαος Λαβίδας</strong></p>
-                <p style="font-size:0.9rem; margin-top:4rem; opacity:0.5; border-top:1px solid #1a2a3a; padding-top:2rem;">&copy; 2026 AthDGC Research Network. Με την επιφύλαξη παντός δικαιώματος.</p>
+                <p class="show-gr">Τμήμα Αγγλικής Γλώσσας και Φιλολογίας</p>
+                <p class="show-en">Department of English Language and Literature</p>
+                
+                <p style="color:var(--white); margin-top:2.5rem;">
+                    <span class="show-gr">Επιστημονικός Υπεύθυνος:</span>
+                    <span class="show-en">Scientific Responsible:</span><br>
+                    <strong>Καθηγητής Διαχρονικής Γλωσσολογίας Νικόλαος Λαβίδας</strong>
+                </p>
+                
+                <p style="font-size:0.9rem; margin-top:4rem; opacity:0.5; border-top:1px solid #1a2a3a; padding-top:2rem;">
+                    &copy; 2026 AthDGC Research Network. <span class="show-gr">Με την επιφύλαξη παντός δικαιώματος.</span><span class="show-en">All rights reserved.</span>
+                </p>
             </div>
         </div>
     </footer>
