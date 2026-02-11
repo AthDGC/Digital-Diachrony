@@ -7,26 +7,32 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/jpg" href="assets/logos/athdgc-favicon.jpg">
 
     <style>
         :root {
-            --primary: #004d99;
-            --secondary: #001a33;
-            --accent: #80ccff;
-            --text: #1a1a1a;
-            --white: #ffffff;
-            --light-bg: #f8fafc;
+            /* Abstract & Beautiful Color Palette */
+            --deep-navy: #0f172a;
+            --midnight: #1e293b;
+            --gold-accent: #d4af37;
+            --teal-abstract: #2a9d8f;
+            --soft-white: #f8fafc;
+            --text-dark: #334155;
+            --text-light: #94a3b8;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--deep-navy) 0%, #1e3a8a 100%);
+            --gradient-abstract: linear-gradient(45deg, var(--gold-accent), var(--teal-abstract));
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Manrope', sans-serif;
             margin: 0;
-            color: var(--text);
+            color: var(--text-dark);
             line-height: 1.8;
+            background-color: var(--soft-white);
             scroll-behavior: smooth;
         }
 
@@ -36,19 +42,21 @@
 
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
-            color: var(--secondary);
+            color: var(--deep-navy);
+            margin-top: 0;
         }
 
         .container {
-            max-width: 1140px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         /* --- HEADER --- */
         header {
-            background: var(--white);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
             padding: 1rem 0;
             position: sticky;
             top: 0;
@@ -61,186 +69,346 @@
             align-items: center;
         }
 
-        .logo-group { display: flex; align-items: center; gap: 1.5rem; }
-        .logo-group a { display: block; border: none; }
-        .logo-group img { height: 60px; width: auto; display: block; }
+        .logo-group { display: flex; align-items: center; gap: 2rem; }
+        .logo-group img { height: 55px; width: auto; display: block; }
 
-        .nav-right { display: flex; align-items: center; }
+        .nav-right { display: flex; align-items: center; gap: 3rem; }
 
-        nav ul { display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
-        nav a:hover { color: var(--primary); }
+        nav ul { display: flex; list-style: none; gap: 2.5rem; margin: 0; padding: 0; }
+        nav a { 
+            text-decoration: none; 
+            color: var(--deep-navy); 
+            font-weight: 600; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--gradient-abstract);
+            transition: width 0.3s;
+        }
+        nav a:hover::after { width: 100%; }
 
         .lang-switch { 
-            border: 1px solid #ddd; 
-            display: inline-flex; 
-            margin-left: 2rem;
-            border-radius: 4px;
-            overflow: hidden;
+            display: flex; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 50px;
+            padding: 4px;
         }
         .lang-btn { 
-            background: var(--white); 
+            background: transparent; 
             border: none; 
-            padding: 8px 16px; 
+            padding: 6px 14px; 
             cursor: pointer; 
-            font-weight: 700; 
+            font-weight: 600; 
             font-size: 0.75rem; 
-            outline: none;
+            border-radius: 50px;
+            color: var(--text-light);
             transition: 0.3s;
         }
-        .lang-btn:hover { background: #f0f0f0; }
-        .lang-btn.active { background: var(--primary); color: var(--white); }
+        .lang-btn.active { background: var(--deep-navy); color: #fff; }
 
         /* --- HERO --- */
         .hero {
             position: relative;
-            /* UPDATED IMAGE HERE */
+            /* Using the requested image */
             background-image: url('assets/images/10.jpg'); 
             background-size: cover;
             background-position: center;
-            padding: 16rem 0;
+            padding: 14rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            color: var(--white);
+            overflow: hidden;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 15, 30, 0.8); /* Slightly darker overlay for better text readability */
+            top: 0; left: 0; right: 0; bottom: 0;
+            /* Abstract Gradient Overlay */
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.85) 100%);
             z-index: 1;
         }
 
-        .hero .container { position: relative; z-index: 2; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-shadow: 0 4px 15px rgba(0,0,0,0.8); color: var(--white); }
-        .hero-subtitle { font-size: 1.6rem; color: var(--accent); margin-bottom: 4rem; text-shadow: 0 2px 8px rgba(0,0,0,0.5); font-weight: 300; }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+        
+        .hero h2 {
+            color: var(--gold-accent);
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero h1 { 
+            font-size: 3.8rem; 
+            line-height: 1.2;
+            color: #fff;
+            margin-bottom: 1.5rem; 
+        }
+
+        .hero-subtitle { 
+            font-size: 1.4rem; 
+            color: #e2e8f0; 
+            margin-bottom: 4rem; 
+            font-weight: 300; 
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .btn-cta {
-            background: var(--primary);
-            color: var(--white);
-            padding: 1.4rem 3.5rem;
+            background: #fff;
+            color: var(--deep-navy);
+            padding: 1.2rem 3rem;
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border: 1px solid var(--primary);
-            transition: 0.4s;
-            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 2px;
         }
-        .btn-cta:hover { background: transparent; border-color: var(--accent); color: var(--white); }
+        .btn-cta:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+        }
 
-        /* --- STATS --- */
-        .stats { background: var(--secondary); color: var(--white); padding: 5rem 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; }
-        .stat-item h3 { font-size: 3.5rem; margin: 0; color: var(--accent); font-family: 'Inter', sans-serif; font-weight: 700; }
-        .stat-item p { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-top: 1rem; opacity: 0.8; }
+        /* --- STATS BAR --- */
+        .stats { 
+            background: #fff; 
+            padding: 4rem 0; 
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .stats-grid { 
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            gap: 2rem; 
+        }
+        .stat-item { text-align: center; }
+        .stat-item h3 { 
+            font-size: 3rem; 
+            margin: 0; 
+            color: var(--deep-navy); 
+            font-weight: 400;
+            background: var(--gradient-abstract);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-item p { 
+            font-size: 0.8rem; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            color: var(--text-light); 
+            margin-top: 0.5rem; 
+        }
 
-        /* --- SECTIONS --- */
+        /* --- ABOUT --- */
         .section { padding: 8rem 0; }
-        .bg-alt { background: var(--light-bg); }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 5rem; color: var(--secondary); }
-        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 1.5rem auto 0; }
+        .section-header { margin-bottom: 6rem; text-align: left; }
+        .section-header h2 { font-size: 3rem; margin-bottom: 1rem; }
+        .section-header .line { width: 80px; height: 4px; background: var(--gradient-abstract); }
 
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-        .about-text p { margin-bottom: 2rem; font-size: 1.15rem; text-align: justify; color: #4a5568; }
-
-        .audience-box { 
-            background: var(--white); 
-            padding: 2.5rem; 
-            border: 1px solid #e2e8f0; 
-            border-left: 5px solid var(--primary); 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-top: 2rem; 
+        .about-content { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 5rem; 
+            align-items: start; 
         }
-        .audience-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .about-text p { font-size: 1.15rem; margin-bottom: 2rem; color: #475569; text-align: justify; }
 
-        .about-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-        .about-grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; transition: transform 0.3s; }
-        .about-grid img:hover { transform: scale(1.02); }
+        .highlight-box {
+            background: var(--deep-navy);
+            color: #fff;
+            padding: 3rem;
+            position: relative;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+        /* Abstract decorative circle */
+        .highlight-box::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: var(--gradient-abstract);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        .highlight-box h4 { color: var(--gold-accent); margin-bottom: 1rem; letter-spacing: 2px; font-size: 1rem; }
+        .highlight-box p { color: #cbd5e1; margin: 0; font-size: 1rem; }
+
+        .grid-images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .grid-images img { width: 100%; height: 250px; object-fit: cover; filter: grayscale(20%); transition: 0.5s; }
+        .grid-images img:hover { filter: grayscale(0%); }
+
+        /* --- MODULES --- */
+        .bg-dark { background: var(--deep-navy); color: #fff; }
+        .bg-dark h2 { color: #fff; }
+        
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .module-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Abstract strip on the left */
+        .module-card::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: var(--gradient-abstract);
+        }
+
+        .module-number {
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            color: rgba(255,255,255,0.1);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-style: italic;
+        }
+
+        .module-card h3 { 
+            color: #fff; 
+            font-size: 1.4rem; 
+            margin-bottom: 0.5rem; 
+            margin-top: 0.5rem;
+            padding-right: 2rem;
+        }
+        
+        .module-hours {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: var(--gold-accent);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 4px 10px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .module-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.7;
+        }
 
         /* --- CERTIFICATION --- */
-        .cert-card { background: var(--secondary); color: var(--white); padding: 4rem; text-align: center; margin-top: 6rem; border-radius: 8px; }
-        .cert-card h3 { color: var(--white); margin-bottom: 3rem; margin-top: 0; }
-        .cert-list { list-style: none; padding: 0; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
-        .cert-list li { display: flex; align-items: center; gap: 1rem; font-size: 1.2rem; font-weight: 500; }
-        .cert-list i { color: var(--accent); font-size: 1.8rem; }
-
-        /* --- MODULES (FIXED LAYOUT) --- */
-        .module-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+        .cert-section { text-align: center; padding: 6rem 0; background: #fff; }
+        .cert-list {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        .cert-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        /* Abstract shape instead of icon */
+        .abstract-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--soft-white);
+            border: 2px solid var(--deep-navy);
+            position: relative;
+        }
+        .abstract-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: var(--gold-accent);
+            border-radius: 50%;
         }
 
-        .module-card { 
-            background: var(--white); 
-            padding: 2.5rem; 
-            border: 1px solid #edf2f7; 
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .module-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-        
-        .module-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; display: block; }
-        
-        .module-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 1.5rem; 
-            border-bottom: 1px solid #f7fafc; 
-            padding-bottom: 1rem; 
-        }
-        .module-header h3 { margin: 0; font-size: 1.4rem; font-family: 'Inter', sans-serif; }
-        .hours { font-size: 0.75rem; font-weight: 700; color: #a0aec0; background: #edf2f7; padding: 4px 8px; border-radius: 4px; }
-        .module-card p { color: #4a5568; margin: 0; }
+        .cert-item span { font-weight: 600; color: var(--deep-navy); font-size: 1.1rem; }
 
-        /* --- FOOTER (FIXED) --- */
+        /* --- FOOTER --- */
         footer { 
-            background: #000b1a; 
-            color: #cbd5e0; 
+            background: #000; 
+            color: #888; 
             padding: 6rem 0 3rem; 
             text-align: center; 
-            border-top: 4px solid var(--primary);
         }
         
         .footer-logos { 
-            margin-bottom: 3rem; 
             display: flex; 
             justify-content: center; 
-            gap: 3rem; 
-            align-items: center; 
+            gap: 4rem; 
+            margin-bottom: 4rem; 
+            align-items: center;
         }
         
-        /* Fixed Logos to show properly */
         .footer-logos img { 
-            height: 80px; 
-            /* Removed invert filter so JPGs look normal */
-            border-radius: 8px;
-            border: 2px solid rgba(255,255,255,0.1);
-            background: #fff; /* Ensure transparent parts (if any) are white */
-            padding: 5px;
+            height: 70px; 
+            /* White background for logos to pop */
+            background: #fff;
+            padding: 10px;
+            opacity: 1; /* removed filters */
         }
+
+        .footer h4 { color: #fff; letter-spacing: 2px; margin-bottom: 2rem; font-size: 1rem; }
+        .footer p { margin: 0.5rem 0; font-size: 1rem; }
+        .footer strong { color: #fff; font-weight: 400; }
         
-        .footer-info p { margin: 0.8rem 0; font-size: 1.1rem; }
-        .footer-highlight { color: var(--white); font-weight: 600; font-size: 1.2rem; }
-        
-        .credits {
+        .copyright {
             margin-top: 4rem;
-            padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-            opacity: 0.6;
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.5;
         }
 
         @media (max-width: 900px) {
+            .hero h1 { font-size: 2.5rem; }
             .about-content { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2rem; }
+            .nav-wrapper { flex-direction: column; gap: 1.5rem; }
+            .nav-right { flex-direction: column; gap: 1rem; }
             .footer-logos { flex-direction: column; gap: 2rem; }
-            .nav-wrapper { flex-direction: column; gap: 1rem; }
-            .lang-switch { margin-left: 0; margin-top: 1rem; }
-            .nav-right { flex-direction: column; }
+            nav ul { flex-direction: column; align-items: center; gap: 1rem; }
         }
     </style>
 </head>
@@ -275,14 +443,21 @@
     </header>
 
     <section class="hero">
-        <div class="container">
-            <h2 class="show-gr" style="color:var(--accent); letter-spacing:4px; font-weight:600; margin-bottom:1.5rem; font-size: 1.2rem;">ΚΕΔΙΒΙΜ - ΕΘΝΙΚΟ ΚΑΙ ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ</h2>
-            <h1 class="show-gr">ΨΗΦΙΑΚΑ ΕΡΓΑΛΕΙΑ ΓΙΑ ΤΗ ΜΕΛΕΤΗ ΤΗΣ ΓΛΩΣΣΙΚΗΣ ΕΞΕΛΙΞΗΣ</h1>
-            <p class="hero-subtitle show-gr">Υπολογιστικές Προσεγγίσεις στη Διαχρονική Γλωσσολογία</p>
+        <div class="hero-content container">
+            <h2 class="show-gr">ΚΕΔΙΒΙΜ ΕΚΠΑ</h2>
+            <h2 class="show-en">NKUA CCE</h2>
             
-            <h2 class="show-en" style="color:var(--accent); letter-spacing:4px; font-weight:600; margin-bottom:1.5rem; font-size: 1.2rem;">NKUA - CENTER OF CONTINUING EDUCATION</h2>
-            <h1 class="show-en">DIGITAL TOOLS FOR THE STUDY OF LANGUAGE EVOLUTION</h1>
-            <p class="hero-subtitle show-en">Computational Approaches to Diachronic Linguistics</p>
+            <h1 class="show-gr">ΨΗΦΙΑΚΗ ΔΙΑΧΡΟΝΙΑ</h1>
+            <h1 class="show-en">DIGITAL DIACHRONY</h1>
+            
+            <p class="hero-subtitle show-gr">
+                Υπολογιστικές Προσεγγίσεις στη Μελέτη της Γλωσσικής Εξέλιξης<br>
+                Ένα καινοτόμο πρόγραμμα εξειδίκευσης 8 μηνών.
+            </p>
+            <p class="hero-subtitle show-en">
+                Computational Approaches to the Study of Language Evolution<br>
+                An innovative 8-month specialization program.
+            </p>
             
             <a href="mailto:nlavidas@enl.uoa.gr" class="btn-cta">
                 <span class="show-gr">ΕΚΔΗΛΩΣΗ ΕΝΔΙΑΦΕΡΟΝΤΟΣ</span>
@@ -297,105 +472,140 @@
                 <div class="stat-item"><h3>8</h3><p class="show-gr">ΜΗΝΕΣ</p><p class="show-en">MONTHS</p></div>
                 <div class="stat-item"><h3>12</h3><p class="show-gr">ECTS</p><p class="show-en">ECTS</p></div>
                 <div class="stat-item"><h3>300</h3><p class="show-gr">ΩΡΕΣ</p><p class="show-en">HOURS</p></div>
-                <div class="stat-item"><h3>100%</h3><p class="show-gr">ΕΞ ΑΠΟΣΤΑΣΕΩΣ</p><p class="show-en">REMOTE</p></div>
+                <div class="stat-item"><h3>100%</h3><p class="show-gr">ONLINE</p><p class="show-en">ONLINE</p></div>
             </div>
         </div>
     </div>
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title show-gr">ΕΠΙΣΤΗΜΟΝΙΚΟ ΠΛΑΙΣΙΟ</h2>
-            <h2 class="section-title show-en">SCIENTIFIC CONTEXT</h2>
+            <div class="section-header">
+                <h2 class="show-gr">ΤΟ ΠΡΟΓΡΑΜΜΑ</h2>
+                <h2 class="show-en">THE PROGRAM</h2>
+                <div class="line"></div>
+            </div>
+            
             <div class="about-content">
                 <div class="about-text">
                     <div class="show-gr">
-                        <p>Το πρόγραμμα «Ψηφιακή Διαχρονία» εστιάζει στην ανάλυση της γλωσσικής μεταβολής μέσω σύγχρονων ψηφιακών μεθοδολογιών. Οι εκπαιδευόμενοι αποκτούν εξειδίκευση στα εργαλεία των <strong>Ψηφιακών Ανθρωπιστικών Επιστημών</strong>, συνδυάζοντας τη γλωσσολογική θεωρία με την υπολογιστική πράξη.</p>
-                        <p>Η χρήση μεγάλων σωμάτων κειμένων (Corpora) και η εφαρμογή στατιστικών μοντέλων επιτρέπει την εξαγωγή ασφαλών συμπερασμάτων για τη δυναμική εξέλιξη των γλωσσών στο πέρασμα των αιώνων.</p>
-                        <div class="audience-box">
-                            <strong>ΟΜΑΔΑ ΣΤΟΧΟΣ</strong>
-                            Απευθύνεται σε φιλολόγους, γλωσσολόγους, ερευνητές και εκπαιδευτικούς που επιδιώκουν επαγγελματική εξειδίκευση στην ανάλυση κειμενικών δεδομένων.
+                        <p>Το πρόγραμμα «Ψηφιακή Διαχρονία» γεφυρώνει το χάσμα μεταξύ της παραδοσιακής φιλολογίας και της σύγχρονης τεχνολογίας. Εστιάζει στην ανάλυση της γλωσσικής μεταβολής μέσω state-of-the-art ψηφιακών εργαλείων.</p>
+                        <p>Οι εκπαιδευόμενοι αποκτούν πρακτικές δεξιότητες στη χρήση μεγάλων σωμάτων κειμένων (Corpora), στατιστικών μοντέλων και γλωσσικής τεχνολογίας, επιτρέποντας την εξαγωγή νέων συμπερασμάτων για την ιστορία των γλωσσών.</p>
+                        
+                        <div class="highlight-box">
+                            <h4>ΟΜΑΔΑ ΣΤΟΧΟΣ</h4>
+                            <p>Απευθύνεται σε φιλολόγους, γλωσσολόγους, ιστορικούς, ερευνητές και εκπαιδευτικούς που επιθυμούν να εντάξουν ψηφιακές μεθοδολογίες στην έρευνα και τη διδασκαλία τους.</p>
                         </div>
                     </div>
                     <div class="show-en">
-                        <p>The "Digital Diachrony" program focuses on analyzing linguistic change through modern digital methodologies. Learners specialize in <strong>Digital Humanities</strong> tools, bridging linguistic theory with computational practice.</p>
-                        <p>The use of large text corpora and the application of statistical models allows for reliable conclusions regarding the dynamic evolution of languages over centuries.</p>
-                        <div class="audience-box">
-                            <strong>TARGET GROUP</strong>
-                            Aimed at philologists, linguists, researchers, and educators seeking professional specialization in textual data analysis.
+                        <p>The "Digital Diachrony" program bridges the gap between traditional philology and modern technology. It focuses on analyzing linguistic change through state-of-the-art digital tools.</p>
+                        <p>Trainees acquire practical skills in using large text corpora, statistical models, and language technology, enabling new insights into the history of languages.</p>
+                        
+                        <div class="highlight-box">
+                            <h4>TARGET GROUP</h4>
+                            <p>Designed for philologists, linguists, historians, researchers, and educators who wish to integrate digital methodologies into their research and teaching.</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-grid">
-                    <img src="assets/images/2.jpg" alt="Data Visualization">
-                    <img src="assets/images/6.jpg" alt="Research Methods">
+                <div class="grid-images">
+                    <img src="assets/images/2.jpg" alt="Data">
+                    <img src="assets/images/6.jpg" alt="Research">
                     <img src="assets/images/7.jpg" alt="History">
-                    <img src="assets/images/8.jpg" alt="Coding">
+                    <img src="assets/images/8.jpg" alt="Code">
                 </div>
-            </div>
-
-            <div class="cert-card">
-                <h3 class="show-gr">ΠΙΣΤΟΠΟΙΗΣΗ ΣΠΟΥΔΩΝ</h3>
-                <h3 class="show-en">CERTIFICATION OF STUDIES</h3>
-                <ul class="cert-list">
-                    <li><i class="fas fa-file-contract"></i> <span class="show-gr">Πιστοποιητικό ΚΕΔΙΒΙΜ ΕΚΠΑ</span><span class="show-en">NKUA Certificate</span></li>
-                    <li><i class="fas fa-id-card"></i> <span class="show-gr">Europass Supplement</span><span class="show-en">Europass Supplement</span></li>
-                    <li><i class="fas fa-award"></i> <span class="show-gr">12 Μονάδες ECTS</span><span class="show-en">12 ECTS Credits</span></li>
-                </ul>
             </div>
         </div>
     </section>
 
-    <section id="curriculum" class="section bg-alt">
+    <section id="curriculum" class="section bg-dark">
         <div class="container">
-            <h2 class="section-title show-gr">ΕΚΠΑΙΔΕΥΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</h2>
-            <h2 class="section-title show-en">EDUCATIONAL MODULES</h2>
-            <div class="module-list">
+            <div class="section-header">
+                <h2 class="show-gr" style="color:#fff;">ΕΚΠΑΙΔΕΥΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</h2>
+                <h2 class="show-en" style="color:#fff;">EDUCATIONAL MODULES</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="module-grid">
                 <div class="module-card">
-                    <i class="fas fa-scroll"></i>
-                    <div class="module-header">
-                        <h3 class="show-gr">1. Διαχρονική Γλωσσολογία</h3>
-                        <h3 class="show-en">1. Diachronic Linguistics</h3>
-                        <span class="hours">75 H</span>
+                    <span class="module-number">01</span>
+                    <div class="module-content">
+                        <h3 class="show-gr">Θεμέλια Διαχρονικής Γλωσσολογίας</h3>
+                        <h3 class="show-en">Foundations of Diachronic Linguistics</h3>
+                        <span class="module-hours">60 H</span>
+                        <p class="show-gr">Εμβάθυνση στους μηχανισμούς γλωσσικής αλλαγής, θεωρίες γραμματικοποίησης, φωνητικές και σημασιολογικές μεταβολές. Μελέτη περιπτώσεων (case studies) από την Ελληνική και άλλες γλώσσες.</p>
+                        <p class="show-en">In-depth study of language change mechanisms, grammaticalization theories, phonetic and semantic changes. Case studies from Greek and other languages.</p>
                     </div>
-                    <p class="show-gr">Θεωρητικά μοντέλα γλωσσικής μεταβολής, γραμματικοποίηση και ανάλυση ιστορικών κειμένων.</p>
-                    <p class="show-en">Theoretical models of language change, grammaticalization, and historical text analysis.</p>
-                </div>
-                
-                <div class="module-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <div class="module-header">
-                        <h3 class="show-gr">2. Υπολογιστικές Μέθοδοι</h3>
-                        <h3 class="show-en">2. Computational Methods</h3>
-                        <span class="hours">75 H</span>
-                    </div>
-                    <p class="show-gr">Εισαγωγή στην Python για γλωσσολόγους, διαχείριση δεδομένων και Επεξεργασία Φυσικής Γλώσσας (NLP).</p>
-                    <p class="show-en">Introduction to Python for linguists, data management, and Natural Language Processing (NLP).</p>
                 </div>
 
                 <div class="module-card">
-                    <i class="fas fa-project-diagram"></i>
-                    <div class="module-header">
-                        <h3 class="show-gr">3. Γλωσσικά Σώματα</h3>
-                        <h3 class="show-en">3. Corpus Linguistics</h3>
-                        <span class="hours">75 H</span>
+                    <span class="module-number">02</span>
+                    <div class="module-content">
+                        <h3 class="show-gr">Υπολογιστικές Μέθοδοι & Εργαλεία</h3>
+                        <h3 class="show-en">Computational Methods & Tools</h3>
+                        <span class="module-hours">60 H</span>
+                        <p class="show-gr">Εισαγωγή στον προγραμματισμό (Python/R) για γλωσσολόγους. Χρήση εργαλείων NLP (NLTK, spaCy), Web Scraping και διαχείριση ψηφιακών δεδομένων.</p>
+                        <p class="show-en">Introduction to programming (Python/R) for linguists. Use of NLP tools (NLTK, spaCy), Web Scraping, and digital data management.</p>
                     </div>
-                    <p class="show-gr">Σχεδιασμός, σχολιασμός και ποσοτική ανάλυση ηλεκτρονικών σωμάτων κειμένων (Corpora).</p>
-                    <p class="show-en">Design, annotation, and quantitative analysis of electronic text corpora.</p>
                 </div>
 
                 <div class="module-card">
-                    <i class="fas fa-chart-line"></i>
-                    <div class="module-header">
-                        <h3 class="show-gr">4. Στατιστική Ανάλυση</h3>
-                        <h3 class="show-en">4. Statistical Analysis</h3>
-                        <span class="hours">75 H</span>
+                    <span class="module-number">03</span>
+                    <div class="module-content">
+                        <h3 class="show-gr">Στατιστική Ανάλυση & Μοντελοποίηση</h3>
+                        <h3 class="show-en">Statistical Analysis & Modeling</h3>
+                        <span class="module-hours">60 H</span>
+                        <p class="show-gr">Εφαρμοσμένη στατιστική για γλωσσικά δεδομένα: έλεγχοι υποθέσεων, μοντέλα παλινδρόμησης, ανάλυση χρονοσειρών και οπτικοποίηση δεδομένων (ggplot2, matplotlib).</p>
+                        <p class="show-en">Applied statistics for linguistic data: hypothesis testing, regression models, time series analysis, and data visualization (ggplot2, matplotlib).</p>
                     </div>
-                    <p class="show-gr">Εφαρμογή στατιστικών μοντέλων και οπτικοποίηση δεδομένων για γλωσσική έρευνα.</p>
-                    <p class="show-en">Application of statistical models and data visualization for linguistic research.</p>
+                </div>
+
+                <div class="module-card">
+                    <span class="module-number">04</span>
+                    <div class="module-content">
+                        <h3 class="show-gr">Εφαρμογές σε Ιστορικές Γλώσσες</h3>
+                        <h3 class="show-en">Applications in Historical Languages</h3>
+                        <span class="module-hours">60 H</span>
+                        <p class="show-gr">Ψηφιακή επεξεργασία αρχαίων/μεσαιωνικών κειμένων. OCR παλαιών εκδόσεων, διαχείριση πολυτονικού, κωδικοποίηση TEI/XML και δημιουργία ψηφιακών κριτικών εκδόσεων.</p>
+                        <p class="show-en">Digital processing of ancient/medieval texts. OCR for old editions, polytonic text management, TEI/XML encoding, and creation of digital critical editions.</p>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <span class="module-number">05</span>
+                    <div class="module-content">
+                        <h3 class="show-gr">Ερευνητικό Εργαστήριο</h3>
+                        <h3 class="show-en">Research Lab</h3>
+                        <span class="module-hours">60 H</span>
+                        <p class="show-gr">Ανάπτυξη πρωτότυπου ερευνητικού project. Δημιουργία ανοιχτού συνόλου δεδομένων (dataset) ή εργαλείου και συγγραφή επιστημονικής εργασίας.</p>
+                        <p class="show-en">Development of an original research project. Creation of an open dataset or tool and writing of a scientific paper.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="cert-section">
+        <div class="container">
+            <h3 class="show-gr">ΠΙΣΤΟΠΟΙΗΣΗ ΣΠΟΥΔΩΝ</h3>
+            <h3 class="show-en">CERTIFICATION</h3>
+            <div class="cert-list">
+                <div class="cert-item">
+                    <div class="abstract-icon"></div>
+                    <span class="show-gr">Πιστοποιητικό ΚΕΔΙΒΙΜ ΕΚΠΑ</span>
+                    <span class="show-en">NKUA Certificate</span>
+                </div>
+                <div class="cert-item">
+                    <div class="abstract-icon"></div>
+                    <span class="show-gr">Europass Supplement</span>
+                    <span class="show-en">Europass Supplement</span>
+                </div>
+                <div class="cert-item">
+                    <div class="abstract-icon"></div>
+                    <span class="show-gr">12 Μονάδες ECTS</span>
+                    <span class="show-en">12 ECTS Credits</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer id="contact">
         <div class="container">
@@ -407,24 +617,25 @@
                     <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
                 </a>
             </div>
+            
             <div class="footer-info">
-                <p class="footer-highlight">
-                    <span class="show-gr">ΕΘΝΙΚΟ ΚΑΙ ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ</span>
-                    <span class="show-en">NATIONAL AND KAPODISTRIAN UNIVERSITY OF ATHENS</span>
-                </p>
+                <h4 class="show-gr">ΕΘΝΙΚΟ ΚΑΙ ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ</h4>
+                <h4 class="show-en">NATIONAL AND KAPODISTRIAN UNIVERSITY OF ATHENS</h4>
                 
                 <p class="show-gr">Τμήμα Αγγλικής Γλώσσας και Φιλολογίας</p>
                 <p class="show-en">Department of English Language and Literature</p>
                 
-                <p style="color:var(--white); margin-top:2.5rem;">
-                    <span class="show-gr">Επιστημονικός Υπεύθυνος:</span>
-                    <span class="show-en">Scientific Responsible:</span><br>
-                    <strong class="show-gr">Νικόλαος Λαβίδας, Καθηγητής Διαχρονικής Γλωσσολογίας</strong>
-                    <strong class="show-en">Nikolaos Lavidas, Professor of Diachronic Linguistics</strong>
-                </p>
-                
-                <div class="credits">
-                    &copy; 2026 AthDGC Research Network. <span class="show-gr">Με την επιφύλαξη παντός δικαιώματος.</span><span class="show-en">All rights reserved.</span>
+                <div style="margin-top: 3rem;">
+                    <p class="show-gr" style="opacity: 0.7; font-size: 0.9rem; text-transform: uppercase;">ΕΠΙΣΤΗΜΟΝΙΚΟΣ ΥΠΕΥΘΥΝΟΣ</p>
+                    <p class="show-en" style="opacity: 0.7; font-size: 0.9rem; text-transform: uppercase;">SCIENTIFIC RESPONSIBLE</p>
+                    
+                    <p class="show-gr"><strong>Νικόλαος Λαβίδας</strong>, Καθηγητής Διαχρονικής Γλωσσολογίας</p>
+                    <p class="show-en"><strong>Nikolaos Lavidas</strong>, Professor of Diachronic Linguistics</p>
+                    <p>nlavidas@enl.uoa.gr</p>
+                </div>
+
+                <div class="copyright">
+                    &copy; 2026 AthDGC Research Network.
                 </div>
             </div>
         </div>
