@@ -15,6 +15,8 @@
     <style>
         :root {
             --primary: #004d99;
+            --secondary: #002b56;
+            --accent: #80ccff;
             --text: #333;
             --light-text: #555;
             --bg-light: #f8f9fa;
@@ -25,9 +27,9 @@
             margin: 0;
             color: var(--text);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
-        /* Language Switching Logic */
         body.lang-gr .show-en { display: none !important; }
         body.lang-en .show-gr { display: none !important; }
 
@@ -42,7 +44,6 @@
             padding: 0 2rem;
         }
 
-        /* Header */
         header {
             background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -64,10 +65,9 @@
         .nav-right { display: flex; align-items: center; gap: 2rem; }
 
         nav ul { display: flex; list-style: none; gap: 1.5rem; margin: 0; padding: 0; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.85rem; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
 
-        /* Language Switcher */
         .lang-switch {
             border: 1px solid #ddd;
             border-radius: 20px;
@@ -83,26 +83,20 @@
             font-size: 0.85rem;
             transition: 0.3s;
         }
-        .lang-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-        .lang-btn:hover:not(.active) { background: #f0f0f0; }
+        .lang-btn.active { background: var(--primary); color: white; }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero {
             position: relative;
-            /* IMAGE: 5.jpg (Computers) */
-            background-image: url('assets/images/5.jpg');
+            background-image: url('assets/images/1.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            padding: 10rem 0;
+            padding: 12rem 0;
             text-align: center;
             color: white;
         }
 
-        /* Dark Overlay for Readability */
         .hero::before {
             content: '';
             position: absolute;
@@ -112,133 +106,58 @@
         }
 
         .hero .container { position: relative; z-index: 2; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .hero-subtitle { font-size: 1.4rem; color: #e0e0e0; font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 3rem; }
 
-        .hero h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #80ccff;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 700;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: #e0e0e0;
-            margin-bottom: 3rem;
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-        }
-
-        /* Glassmorphism CTA */
-        .cta-box {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255,255,255,0.25);
-            padding: 1.5rem 3rem;
-            display: inline-block;
-            border-radius: 50px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-box:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .cta-box p { margin: 0; font-size: 1.1rem; font-weight: 500; color: #fff; }
-        .cta-box a { color: #fff; font-weight: 700; text-decoration: none; border-bottom: 1px dotted #fff; margin-left: 8px;}
-        .cta-box a:hover { color: #80ccff; border-color: #80ccff; }
-
-        /* Stats Section */
-        .stats { 
-            position: relative;
-            /* IMAGE: 4.jpg (Background Texture) */
-            background-image: url('assets/images/4.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 4rem 0; 
-        }
-        .stats::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 77, 153, 0.85); /* Blue overlay */
-            z-index: 1;
-        }
+        /* --- STATS --- */
+        .stats { position: relative; background-image: url('assets/images/4.jpg'); background-size: cover; color: white; padding: 4rem 0; }
+        .stats::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 77, 153, 0.85); z-index: 1; }
         .stats .container { position: relative; z-index: 2; }
-
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; }
-        .stat-item h3 { color: white; font-size: 3rem; margin-bottom: 0.5rem; font-weight: 700; }
-        .stat-item p { opacity: 0.9; font-size: 0.9rem; line-height: 1.4; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-item h3 { font-size: 3rem; margin: 0; color: white; }
 
-        /* Content Sections */
-        .section { padding: 6rem 0; }
+        /* --- SECTIONS --- */
+        .section { padding: 8rem 0; }
         .bg-alt { background: var(--bg-light); }
-
-        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 4rem; position: relative; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 4rem; }
         .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 1.5rem auto 0; }
 
         .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        
-        .about-img img { 
-            width: 100%; 
-            border-radius: 12px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
-        }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .about-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 
-        .about-text p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #555; }
-        
-        .audience-box { 
-            background: #f0f4f8; 
-            padding: 2rem; 
-            border-left: 5px solid var(--primary); 
-            border-radius: 0 8px 8px 0; 
-            font-size: 1rem; 
-            margin-top: 2rem; 
-        }
-        
-        .audience-box strong { 
-            color: var(--primary); 
-            display: block; 
-            margin-bottom: 0.5rem; 
-            font-size: 1.1rem; 
-            text-transform: uppercase; 
-        }
+        .audience-box { background: #eef7fc; padding: 2rem; border-left: 5px solid var(--primary); border-radius: 0 8px 8px 0; margin-top: 2rem; }
+        .audience-box strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
 
-        /* Modules */
-        .module-card { background: white; padding: 2.5rem; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid var(--primary); transition: transform 0.3s; }
-        .module-card:hover { transform: translateX(10px); }
-        .module-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
-        .module-title h3 { font-size: 1.4rem; margin: 0; font-weight: 700; color: #1a1a1a; }
-        .hours { background: #eef7fc; color: var(--primary); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; }
+        /* --- LEARNING PATH --- */
+        .path-container { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 4rem; position: relative; padding-top: 2rem; }
+        .path-step { flex: 1; text-align: center; position: relative; padding: 0 10px; }
+        .path-step::after { content: '\f061'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; top: 20px; right: -10%; color: var(--primary); opacity: 0.3; font-size: 1.2rem; }
+        .path-step:last-child::after { display: none; }
+        .step-num { width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: 700; box-shadow: 0 4px 10px rgba(0,77,153,0.3); }
+        
+        /* --- MODULES --- */
+        .module-card { background: white; padding: 2.5rem; margin-bottom: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid var(--primary); transition: 0.3s; }
+        .module-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .module-card i { font-size: 1.8rem; color: var(--primary); margin-bottom: 1.5rem; display: block; }
+        .module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .hours { background: #eef7fc; color: var(--primary); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
 
-        /* Footer */
-        footer { background: #111; color: #aaa; padding: 5rem 0 3rem; text-align: center; font-size: 0.95rem; }
-        .footer-logos img { height: 70px; margin: 0 1.5rem; opacity: 0.7; filter: grayscale(100%); transition: 0.4s; }
-        .footer-logos img:hover { filter: none; opacity: 1; transform: translateY(-5px); }
+        /* --- FOOTER --- */
+        footer { background: #0a0a0a; color: #999; padding: 5rem 0 3rem; text-align: center; }
+        .footer-logos img { height: 60px; margin: 0 1rem; filter: grayscale(100%) brightness(2); opacity: 0.6; }
 
         @media (max-width: 768px) {
-            .about-content { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 1.8rem; }
-            .nav-wrapper { flex-direction: column; gap: 1rem; }
-            .nav-right { flex-direction: column; gap: 1rem; }
+            .about-content, .path-container { flex-direction: column; }
+            .path-step { margin-bottom: 3rem; width: 100%; }
+            .path-step::after { display: none; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
-<body class="lang-gr"> <header>
+<body class="lang-gr">
+
+    <header>
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-group">
@@ -249,6 +168,7 @@
                     <nav>
                         <ul>
                             <li><a href="#about" class="show-gr">ΕΠΙΣΚΟΠΗΣΗ</a><a href="#about" class="show-en">Overview</a></li>
+                            <li><a href="#path" class="show-gr">ΔΙΑΔΡΟΜΗ</a><a href="#path" class="show-en">Path</a></li>
                             <li><a href="#curriculum" class="show-gr">ΕΝΟΤΗΤΕΣ</a><a href="#curriculum" class="show-en">Modules</a></li>
                             <li><a href="#contact" class="show-gr">ΕΠΙΚΟΙΝΩΝΙΑ</a><a href="#contact" class="show-en">Contact</a></li>
                         </ul>
@@ -264,144 +184,124 @@
 
     <section class="hero">
         <div class="container">
-            <h2 class="show-gr">ΠΡΟΓΡΑΜΜΑ ΕΠΑΓΓΕΛΜΑΤΙΚΗΣ ΑΝΑΠΤΥΞΗΣ (ΚΕΔΙΒΙΜ)</h2>
+            <h2 class="show-gr" style="color:var(--accent); letter-spacing:2px;">ΚΕΔΙΒΙΜ ΕΚΠΑ</h2>
             <h1 class="show-gr">ΨΗΦΙΑΚΑ ΕΡΓΑΛΕΙΑ ΓΙΑ ΤΗ ΜΕΛΕΤΗ ΤΗΣ ΓΛΩΣΣΙΚΗΣ ΕΞΕΛΙΞΗΣ</h1>
-            <p class="hero-subtitle show-gr">Ψηφιακή Διαχρονία: Υπολογιστικές Προσεγγίσεις στη Διαχρονική Γλωσσολογία</p>
+            <p class="hero-subtitle show-gr">Υπολογιστικές Προσεγγίσεις στη Διαχρονική Γλωσσολογία</p>
             
-            <h2 class="show-en">Professional Development Program (KEDIVIM)</h2>
-            <h1 class="show-en">Digital Tools for the Study of Language Evolution</h1>
-            <p class="hero-subtitle show-en">Digital Diachrony: Computational Approaches to Diachronic Linguistics</p>
+            <h2 class="show-en" style="color:var(--accent); letter-spacing:2px;">KEDIVIM NKUA</h2>
+            <h1 class="show-en">DIGITAL TOOLS FOR LANGUAGE EVOLUTION</h1>
+            <p class="hero-subtitle show-en">Computational Approaches to Diachronic Linguistics</p>
             
-            <div class="cta-box">
-                <p class="show-gr"><i class="fas fa-bullhorn"></i> Η ΠΡΟΘΕΣΜΙΑ ΘΑ ΑΝΑΚΟΙΝΩΘΕΙ</p>
-                <p class="show-en"><i class="fas fa-bullhorn"></i> Deadline to be announced</p>
-                <a href="mailto:nlavidas@enl.uoa.gr">nlavidas@enl.uoa.gr</a>
-            </div>
+            <a href="mailto:nlavidas@enl.uoa.gr" style="background:var(--primary); color:white; padding:1.2rem 2.5rem; border-radius:50px; text-decoration:none; font-weight:700; display:inline-block; transition:0.3s; border:1px solid rgba(255,255,255,0.2);">
+                <span class="show-gr">ΕΚΔΗΛΩΣΗ ΕΝΔΙΑΦΕΡΟΝΤΟΣ</span>
+                <span class="show-en">ENROLLMENT INQUIRY</span>
+            </a>
         </div>
     </section>
 
     <div class="stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>8</h3>
-                    <p class="show-gr">ΜΗΝΕΣ ΔΙΑΡΚΕΙΑ</p><p class="show-en">Months Duration</p>
-                </div>
-                <div class="stat-item">
-                    <h3>12</h3>
-                    <p class="show-gr">ΜΟΝΑΔΕΣ ECTS</p><p class="show-en">ECTS Credits</p>
-                </div>
-                <div class="stat-item">
-                    <h3>300</h3>
-                    <p class="show-gr">ΩΡΕΣ ΣΥΝΟΛΟ</p><p class="show-en">Total Hours</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="show-gr">Online</h3><h3 class="show-en">Online</h3>
-                    <p class="show-gr">ΑΣΥΓΧΡΟΝΗ ΕΚΠΑΙΔΕΥΣΗ</p><p class="show-en">Asynchronous</p>
-                </div>
+                <div class="stat-item"><h3>8</h3><p class="show-gr">ΜΗΝΕΣ</p><p class="show-en">MONTHS</p></div>
+                <div class="stat-item"><h3>12</h3><p class="show-gr">ECTS</p><p class="show-en">ECTS</p></div>
+                <div class="stat-item"><h3>300</h3><p class="show-gr">ΩΡΕΣ</p><p class="show-en">HOURS</p></div>
+                <div class="stat-item"><h3>100%</h3><p class="show-gr">ONLINE</p><p class="show-en">ONLINE</p></div>
             </div>
         </div>
     </div>
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title show-gr">ΕΠΙΣΚΟΠΗΣΗ ΠΡΟΓΡΑΜΜΑΤΟΣ</h2>
-            <h2 class="section-title show-en">Program Overview</h2>
-            
+            <h2 class="section-title show-gr">ΤΟ ΠΡΟΓΡΑΜΜΑ</h2>
+            <h2 class="section-title show-en">THE PROGRAM</h2>
             <div class="about-content">
                 <div class="about-text">
-                    
                     <div class="show-gr">
-                        <p>Το πρόγραμμα προσφέρει εξειδικευμένη κατάρτιση σε φιλολόγους και ερευνητές στις σύγχρονες ψηφιακές μεθόδους μελέτης της γλωσσικής εξέλιξης. Συνδυάζει μοναδικά την παραδοσιακή γλωσσολογική ανάλυση με υπολογιστικά εργαλεία αιχμής, υιοθετώντας πλήρως τη φιλοσοφία της <strong>Ανοικτής Πρόσβασης</strong>.</p>
-                        <p>Οι συμμετέχοντες θα αποκτήσουν πρακτικές δεξιότητες στον προγραμματισμό και την ανάλυση δεδομένων, επιτρέποντάς τους να διαχειρίζονται μεγάλα σώματα ιστορικών κειμένων.</p>
+                        <p>Το πρόγραμμα <strong>Ψηφιακή Διαχρονία</strong> γεφυρώνει το χάσμα μεταξύ ανθρωπιστικών επιστημών και τεχνολογίας. Εκπαιδεύουμε μια νέα γενιά ερευνητών ικανών να αναλύουν τη γλώσσα μέσω κώδικα και στατιστικής.</p>
                         <div class="audience-box">
-                            <strong>ΣΕ ΠΟΙΟΥΣ ΑΠΕΥΘΥΝΕΤΑΙ</strong>
-                            Σε φιλολόγους όλων των γλωσσών (Κλασικής, Βυζαντινής, Νεοελληνικής, Αγγλικής, Γερμανικής, Γαλλικής κ.ά.), εκπαιδευτικούς, μεταπτυχιακούς φοιτητές γλωσσολογίας και ερευνητές ψηφιακών ανθρωπιστικών επιστημών.
+                            <strong>ΠΡΟΦΙΛ ΥΠΟΨΗΦΙΩΝ</strong>
+                            Φιλόλογοι, Γλωσσολόγοι, Εκπαιδευτικοί και Ερευνητές Ψηφιακών Ανθρωπιστικών Επιστημών.
                         </div>
                     </div>
-
                     <div class="show-en">
-                        <p>This program offers specialized training for philologists and researchers in modern digital methods for studying language evolution. It uniquely combines traditional linguistic analysis with cutting-edge computational tools, fully adopting the <strong>Open Access</strong> philosophy.</p>
-                        <p>Participants will gain practical skills in programming and data analysis, enabling them to handle large corpora of historical texts.</p>
+                        <p>The <strong>Digital Diachrony</strong> program bridges the gap between humanities and technology. We train a new generation of researchers capable of analyzing language through code and statistics.</p>
                         <div class="audience-box">
-                            <strong>Target Audience</strong>
-                            Open to philologists of all languages (Classics, Byzantine, Modern Greek, English, German, French, Spanish, Italian, etc.), educators, linguistics graduate students, digital humanities researchers, and language technology professionals.
+                            <strong>CANDIDATE PROFILE</strong>
+                            Philologists, Linguists, Educators, and Digital Humanities Researchers.
                         </div>
                     </div>
                 </div>
-                
-                <div class="about-image">
-                    <img src="assets/images/3.jpg" alt="Linguistics and Technology">
+                <div class="about-grid">
+                    <img src="assets/images/2.jpg" alt="Data">
+                    <img src="assets/images/6.jpg" alt="Research">
+                    <img src="assets/images/7.jpg" alt="History">
+                    <img src="assets/images/8.jpg" alt="Digital">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="curriculum" class="section bg-alt">
+    <section id="path" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title show-gr">ΜΑΘΗΣΙΑΚΗ ΔΙΑΔΡΟΜΗ</h2>
+            <h2 class="section-title show-en">LEARNING PATH</h2>
+            
+            <div class="path-container">
+                <div class="path-step">
+                    <div class="step-num">1</div>
+                    <h4 class="show-gr">Θεωρία</h4><h4 class="show-en">Theory</h4>
+                    <p style="font-size:0.85rem">Foundations of language change.</p>
+                </div>
+                <div class="path-step">
+                    <div class="step-num">2</div>
+                    <h4 class="show-gr">Εργαλεία</h4><h4 class="show-en">Tools</h4>
+                    <p style="font-size:0.85rem">Python, R & Corpus Linguistics.</p>
+                </div>
+                <div class="path-step">
+                    <div class="step-num">3</div>
+                    <h4 class="show-gr">Ανάλυση</h4><h4 class="show-en">Analysis</h4>
+                    <p style="font-size:0.85rem">Statistical modeling of data.</p>
+                </div>
+                <div class="path-step">
+                    <div class="step-num">4</div>
+                    <h4 class="show-gr">Έρευνα</h4><h4 class="show-en">Research</h4>
+                    <p style="font-size:0.85rem">Final capstone project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="section">
         <div class="container">
             <h2 class="section-title show-gr">ΘΕΜΑΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</h2>
-            <h2 class="section-title show-en">Thematic Units</h2>
+            <h2 class="section-title show-en">THEMATIC UNITS</h2>
             
             <div class="module-card">
+                <i class="fas fa-book-atlas"></i>
                 <div class="module-header">
-                    <div class="module-title">
-                        <h3 class="show-gr">1. ΘΕΜΕΛΙΑ ΤΗΣ ΔΙΑΧΡΟΝΙΚΗΣ ΓΛΩΣΣΟΛΟΓΙΑΣ</h3>
-                        <h3 class="show-en">1. Foundations of Diachronic Linguistics</h3>
-                    </div>
+                    <h3 class="show-gr">1. Διαχρονική Γλωσσολογία</h3><h3 class="show-en">1. Diachronic Linguistics</h3>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-gr">Μηχανισμοί γλωσσικής αλλαγής, θεωρίες γραμματικοποίησης, φωνητικές και σημασιολογικές αλλαγές. Ανάλυση μελετών περίπτωσης από την Ελληνική και άλλες γλώσσες.</p>
-                <p class="show-en">Mechanisms of language change, grammaticalization theories, phonetic and semantic changes. Analysis of case studies from Greek and other languages.</p>
+                <p>Mechanisms of language change and grammaticalization.</p>
             </div>
 
             <div class="module-card">
+                <i class="fas fa-terminal"></i>
                 <div class="module-header">
-                    <div class="module-title">
-                        <h3 class="show-gr">2. ΥΠΟΛΟΓΙΣΤΙΚΕΣ ΜΕΘΟΔΟΙ & ΕΡΓΑΛΕΙΑ</h3>
-                        <h3 class="show-en">2. Computational Methods & Tools</h3>
-                    </div>
+                    <h3 class="show-gr">2. Υπολογιστικές Μέθοδοι</h3><h3 class="show-en">2. Computational Methods</h3>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-gr">Προγραμματισμός Python/R για γλωσσική ανάλυση, χρήση NLTK/spaCy για επεξεργασία κειμένου, κανονικές εκφράσεις και ανάκτηση δεδομένων ιστού (web scraping).</p>
-                <p class="show-en">Python/R programming for language analysis, using NLTK/spaCy for text processing, regular expressions, and web scraping.</p>
+                <p>Coding for linguists: Python, NLTK, and Web Scraping.</p>
             </div>
 
             <div class="module-card">
+                <i class="fas fa-microchip"></i>
                 <div class="module-header">
-                    <div class="module-title">
-                        <h3 class="show-gr">3. ΣΤΑΤΙΣΤΙΚΗ ΑΝΑΛΥΣΗ & ΜΟΝΤΕΛΟΠΟΙΗΣΗ</h3>
-                        <h3 class="show-en">3. Statistical Analysis & Modeling</h3>
-                    </div>
+                    <h3 class="show-gr">3. Εργαστήριο Έρευνας</h3><h3 class="show-en">3. Research Lab</h3>
                     <span class="hours">60 Hours</span>
                 </div>
-                <p class="show-gr">Περιγραφική στατιστική, έλεγχος υποθέσεων, ανάλυση παλινδρόμησης για γλωσσικά φαινόμενα. Μοντέλα χρονοσειρών στη γλωσσική εξέλιξη.</p>
-                <p class="show-en">Descriptive statistics, hypothesis testing, regression analysis for linguistic phenomena. Time series models in language evolution.</p>
+                <p>Hands-on application with historical corpora and OCR.</p>
             </div>
-
-            <div class="module-card">
-                <div class="module-header">
-                    <div class="module-title">
-                        <h3 class="show-gr">4. ΕΦΑΡΜΟΓΕΣ ΣΕ ΙΣΤΟΡΙΚΕΣ ΓΛΩΣΣΕΣ</h3>
-                        <h3 class="show-en">4. Applications in Historical Languages</h3>
-                    </div>
-                    <span class="hours">60 Hours</span>
-                </div>
-                <p class="show-gr">Ψηφιακή επεξεργασία αρχαίων κειμένων, OCR για παλιές εκδόσεις, διαχείριση πολυτονικών ελληνικών, κωδικοποίηση TEI/XML και δημιουργία ψηφιακών κριτικών εκδόσεων.</p>
-                <p class="show-en">Digital processing of ancient texts, OCR for old editions, polytonic Greek handling, TEI/XML encoding, and creation of digital critical editions.</p>
-            </div>
-
-            <div class="module-card">
-                <div class="module-header">
-                    <div class="module-title">
-                        <h3 class="show-gr">5. ΕΡΕΥΝΗΤΙΚΟ ΕΡΓΑΣΤΗΡΙΟ</h3>
-                        <h3 class="show-en">5. Research Lab</h3>
-                    </div>
-                    <span class="hours">60 Hours</span>
-                </div>
-                <p class="show-gr">Ανάπτυξη πρωτότυπου ερευνητικού έργου, δημιουργία ανοικτού συνόλου δεδομένων/εργαλείου, συγγραφή επιστημονικής εργασίας και παρουσίαση σε μορφή συνεδρίου.</p>
-                <p class="show-en">Development of an original research project, creation of an open dataset/tool, writing a scientific paper, and presentation in conference format.</p>
-            </div>
-
         </div>
     </section>
 
@@ -411,31 +311,19 @@
                 <img src="assets/logos/EKPA.jpg" alt="NKUA">
                 <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
             </div>
-            
-            <p style="margin-top: 2rem; color: #fff;"><strong>National and Kapodistrian University of Athens</strong><br>Department of English Language and Literature</p>
-            
-            <p style="margin-top: 1rem; font-size: 0.95rem;">
-                <span class="show-gr">ΕΠΙΣΤΗΜΟΝΙΚΟΣ ΥΠΕΥΘΥΝΟΣ:</span><span class="show-en">Scientific Responsible:</span><br>
-                <strong style="color: white;">Prof. Nikolaos Lavidas</strong>
-            </p>
-            
-            <p style="margin-top: 2rem; border-top: 1px solid #333; padding-top: 2rem; opacity: 0.6;">
-                &copy; 2026 AthDGC Research Network.
-            </p>
+            <p style="margin-top:2rem; color:white;"><strong>National and Kapodistrian University of Athens</strong></p>
+            <p>Scientific Responsible: <strong>Prof. Nikolaos Lavidas</strong></p>
+            <p style="font-size:0.8rem; margin-top:2rem; opacity:0.5;">&copy; 2026 AthDGC Research Network</p>
         </div>
     </footer>
 
     <script>
         function setLanguage(lang) {
-            // Update body class
             document.body.className = 'lang-' + lang;
-            
-            // Update buttons
             document.getElementById('btn-en').classList.remove('active');
             document.getElementById('btn-gr').classList.remove('active');
             document.getElementById('btn-' + lang).classList.add('active');
         }
     </script>
-
 </body>
 </html>
