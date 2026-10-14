@@ -15,7 +15,6 @@
 ## Website
 View the official program site here:  
 [**https://athdgc.github.io/Digital-Diachrony/**](https://athdgc.github.io/Digital-Diachrony/)
-*(Note: Replace `athdgc` with your actual username if different)*
 
 ## Curriculum
 1. Foundations of Diachronic Linguistics
