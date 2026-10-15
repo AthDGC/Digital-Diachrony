@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="el">
+  <title>Ψηφιακή Διαχρονία: ιστολόγιο</title>
+  <link href="https://athdgc.github.io/Digital-Diachrony/blog/"/>
+  <link rel="self" href="https://athdgc.github.io/Digital-Diachrony/blog/feed.xml"/>
+  <id>https://athdgc.github.io/Digital-Diachrony/blog/</id>
+  <updated>2026-10-15T09:00:00+03:00</updated>
+  <author><name>Νικόλαος Λαβίδας</name></author>
+  <entry>
+    <title>Ανοιχτές οι αιτήσεις για τον πρώτο κύκλο</title>
+    <link href="https://athdgc.github.io/Digital-Diachrony/blog/aitiseis-protos-kyklos.html"/>
+    <id>https://athdgc.github.io/Digital-Diachrony/blog/aitiseis-protos-kyklos.html</id>
+    <updated>2026-10-15T09:00:00+03:00</updated>
+    <summary>Ο πρώτος κύκλος ξεκινά στις 30 Οκτωβρίου 2026 και οι αιτήσεις υποβάλλονται έως τις 26 Οκτωβρίου. Τι περιλαμβάνει το πρόγραμμα, πόσο κοστίζει και πώς γίνεται η αίτηση.</summary>
+  </entry>
+  <entry>
+    <title>Από την απουσία στο δεδομένο: τι αλλάζει όταν επισημειώνουμε ένα κείμενο</title>
+    <link href="https://athdgc.github.io/Digital-Diachrony/blog/apo-tin-apousia-sto-dedomeno.html"/>
+    <id>https://athdgc.github.io/Digital-Diachrony/blog/apo-tin-apousia-sto-dedomeno.html</id>
+    <updated>2026-10-15T09:00:00+03:00</updated>
+    <summary>Ένα μηδενικό αντικείμενο στο απλό κείμενο είναι απλώς μια απουσία. Πώς η επισημείωση το κάνει μετρήσιμο, και ποια είναι η αλυσίδα από τη σελίδα ενός παλαιού εντύπου έως τον γράφο που επερωτάται.</summary>
+  </entry>
+  <entry>
+    <title>Πιστοποιητικό και μόρια: τι αναγνωρίζεται</title>
+    <link href="https://athdgc.github.io/Digital-Diachrony/blog/pistopoiitiko-kai-moria.html"/>
+    <id>https://athdgc.github.io/Digital-Diachrony/blog/pistopoiitiko-kai-moria.html</id>
+    <updated>2026-10-15T09:00:00+03:00</updated>
+    <summary>Τι πιστοποιητικό χορηγείται και με ποιες προϋποθέσεις, και ποια μόρια προβλέπονται σε διορισμούς εκπαιδευτικών και επιλογές στελεχών.</summary>
+  </entry>
+</feed>
