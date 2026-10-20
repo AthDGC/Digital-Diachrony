@@ -10,7 +10,7 @@ Official programme page and applications: [cce.uoa.gr](https://cce.uoa.gr/course
 
 Eight months, 300 hours of study, asynchronous and fully online, taught in Greek. Five modules of 60 hours each: Foundations of Diachronic Linguistics, Computational Methods and Tools, Statistical Analysis and Modelling, Applications to Historical Languages, and Research Laboratory and Practical Training. Successful participants receive a Certificate of Specialized Training (Level 6 of the European Qualifications Framework). Applications for the first cycle close on 26 October 2026; teaching starts on 30 October 2026.
 
-Academic Coordinator: Nikolaos Lavidas, Professor of Diachronic Linguistics, National and Kapodistrian University of Athens, Faculty of Philosophy, Department of English Language and Literature, Division of Language-Linguistics, AthDGC Laboratory for Diachronic Linguistics and Language Change.
+Academic Head: Nikolaos Lavidas, Professor of Diachronic Linguistics, National and Kapodistrian University of Athens, Faculty of Philosophy, Department of English Language and Literature, Division of Language-Linguistics, AthDGC Laboratory for Diachronic Linguistics and Language Change.
 
 ## Repository layout
 
