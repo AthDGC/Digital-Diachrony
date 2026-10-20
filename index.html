@@ -3,544 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ψηφιακή Διαχρονία | ΚΕΔΙΒΙΜ ΕΚΠΑ</title>
-    
+    <title>Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας | ΚΕΔΙΒΙΜ ΕΚΠΑ</title>
+    <meta name="description" content="Πρόγραμμα 1829 του ΚΕΔΙΒΙΜ ΕΚΠΑ: 300 ώρες, ασύγχρονο εξ αποστάσεως, Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης επιπέδου 6. Αιτήσεις έως 26 Οκτωβρίου 2026.">
+    <link rel="canonical" href="https://athdgc.github.io/Digital-Diachrony/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/jpg" href="assets/logos/athdgc-favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <link rel="icon" type="image/jpeg" href="assets/logos/athdgc-favicon.jpg">
 
-    <meta name="description" content="Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας. Επιμορφωτικό πρόγραμμα 1829 του ΚΕΔΙΒΙΜ ΕΚΠΑ, 300 ώρες, εξ αποστάσεως, αιτήσεις έως 26 Οκτωβρίου 2026.">
-    <link rel="canonical" href="https://athdgc.github.io/Digital-Diachrony/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="AthDGC">
+    <meta property="og:site_name" content="Ψηφιακή Διαχρονία">
+    <meta property="og:locale" content="el_GR">
     <meta property="og:url" content="https://athdgc.github.io/Digital-Diachrony/">
     <meta property="og:title" content="Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας, ΚΕΔΙΒΙΜ ΕΚΠΑ 1829">
-    <meta property="og:description" content="300 ώρες, οκτώ μήνες, εξ αποστάσεως ασύγχρονα. Σώματα κειμένων, Python, στατιστική, OCR και TEI/XML για φιλολόγους και εκπαιδευτικούς. Αιτήσεις έως 26 Οκτωβρίου 2026.">
+    <meta property="og:description" content="300 ώρες, οκτώ μήνες, ασύγχρονο εξ αποστάσεως. Σώματα κειμένων, Python, στατιστική, OCR και TEI/XML για φιλολόγους και εκπαιδευτικούς. Αιτήσεις έως 26 Οκτωβρίου 2026.">
     <meta property="og:image" content="https://athdgc.github.io/Digital-Diachrony/assets/images/social-1829-1200x630.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας, ΚΕΔΙΒΙΜ ΕΚΠΑ 1829">
-    <meta name="twitter:description" content="300 ώρες, οκτώ μήνες, εξ αποστάσεως ασύγχρονα. Αιτήσεις έως 26 Οκτωβρίου 2026.">
+    <meta name="twitter:description" content="300 ώρες, ασύγχρονο εξ αποστάσεως. Αιτήσεις έως 26 Οκτωβρίου 2026.">
     <meta name="twitter:image" content="https://athdgc.github.io/Digital-Diachrony/assets/images/social-1829-1200x630.jpg">
 
-    <style>
-        :root {
-            /* --- ABSTRACT & ELEGANT PALETTE --- */
-            --deep-navy: #0a1128;   /* Very dark navy */
-            --rich-blue: #1c2541;   /* Slightly lighter navy */
-            --gold-accent: #d4af37; /* Metallic Gold */
-            --teal-highlight: #3a506b; /* Muted Teal/Grey Blue */
-            --soft-white: #f8fafc;
-            --pure-white: #ffffff;
-            --text-grey: #cbd5e1;
-            
-            /* Gradients */
-            --gradient-hero: linear-gradient(180deg, rgba(10, 17, 40, 0.5) 0%, rgba(10, 17, 40, 0.85) 100%);
-            --gradient-gold: linear-gradient(45deg, #d4af37, #f3e5ab);
-            --gradient-abstract: linear-gradient(135deg, var(--deep-navy) 0%, var(--teal-highlight) 100%);
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας",
+        "alternateName": ["Digital Tools for the Diachronic Analysis of Language", "Ψηφιακή Διαχρονία", "Digital Diachrony"],
+        "description": "Επιμορφωτικό πρόγραμμα 300 ωρών του Κέντρου Επιμόρφωσης και Διά Βίου Μάθησης του ΕΚΠΑ για την ανάλυση της γλωσσικής αλλαγής με ψηφιακά εργαλεία: σώματα κειμένων, Python και R, στατιστική, OCR και TEI/XML.",
+        "courseCode": "1829",
+        "inLanguage": "el",
+        "educationalCredentialAwarded": "Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης",
+        "url": "https://athdgc.github.io/Digital-Diachrony/",
+        "provider": {
+            "@type": "CollegeOrUniversity",
+            "name": "Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών, Κέντρο Επιμόρφωσης και Διά Βίου Μάθησης",
+            "url": "https://cce.uoa.gr/"
+        },
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT300H",
+            "startDate": "2026-10-30"
+        },
+        "offers": {
+            "@type": "Offer",
+            "category": "Paid",
+            "price": "500",
+            "priceCurrency": "EUR",
+            "validThrough": "2026-10-26",
+            "url": "https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8"
         }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Manrope', sans-serif;
-            margin: 0;
-            color: var(--text-grey);
-            line-height: 1.9;
-            background-color: var(--soft-white);
-        }
-
-        /* Language Toggle Logic */
-        body.lang-gr .show-en { display: none !important; }
-        body.lang-en .show-gr { display: none !important; }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-            color: var(--deep-navy);
-            margin-top: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* --- HEADER --- */
-        header {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
-            padding: 1.2rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-group { display: flex; align-items: center; gap: 2rem; }
-        .logo-group img { height: 65px; width: auto; display: block; }
-
-        .nav-right { display: flex; align-items: center; gap: 4rem; }
-
-        nav ul { display: flex; list-style: none; gap: 3rem; margin: 0; padding: 0; }
-        nav a { 
-            text-decoration: none; 
-            color: var(--deep-navy); 
-            font-weight: 700; 
-            font-size: 0.85rem; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            position: relative;
-            transition: color 0.3s;
-        }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: var(--gold-accent);
-            transition: width 0.3s;
-        }
-        nav a:hover::after { width: 100%; }
-
-        .lang-switch { 
-            display: flex; 
-            border: 1px solid #cbd5e1; 
-            border-radius: 50px;
-            padding: 4px;
-        }
-        .lang-btn { 
-            background: transparent; 
-            border: none; 
-            padding: 8px 16px; 
-            cursor: pointer; 
-            font-weight: 700; 
-            font-size: 0.8rem; 
-            border-radius: 50px;
-            color: #64748b;
-            transition: 0.3s;
-        }
-        .lang-btn.active { background: var(--deep-navy); color: #fff; }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            position: relative;
-            background-image: url('assets/images/10.jpg'); 
-            background-color: var(--deep-navy); 
-            background-size: cover;
-            background-position: center;
-            padding: 16rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* Dark overlay for white text readability */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: var(--gradient-hero);
-            z-index: 1;
-        }
-
-        .hero-content { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; }
-        
-        .hero h2 {
-            color: var(--gold-accent);
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.1rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-            font-weight: 700;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        }
-
-        .hero h1 { 
-            font-size: 4.2rem; 
-            line-height: 1.2;
-            color: var(--pure-white);
-            margin-bottom: 2.5rem; 
-            font-weight: 600;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.6);
-        }
-
-        .hero-subtitle { 
-            font-size: 1.4rem; 
-            color: #e2e8f0; 
-            margin-bottom: 5rem; 
-            font-weight: 300; 
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-deadline {
-            margin-top: 1.6rem;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            color: var(--soft-white);
-            opacity: 0.85;
-        }
-
-        .btn-cta {
-            background: transparent;
-            color: var(--pure-white);
-            padding: 1.5rem 4rem;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-            border: 1px solid var(--gold-accent);
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-cta:hover { 
-            background: var(--gold-accent); 
-            color: var(--deep-navy); 
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
-        }
-
-        /* --- STATS BAR --- */
-        .stats { 
-            background: var(--pure-white); 
-            padding: 6rem 0; 
-            position: relative;
-            z-index: 5;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-        }
-        .stats-grid { 
-            display: flex; 
-            justify-content: space-around; 
-            flex-wrap: wrap; 
-            gap: 2rem; 
-        }
-        .stat-item { text-align: center; }
-        .stat-item h3 { 
-            font-size: 3.5rem; 
-            margin: 0; 
-            color: var(--deep-navy); 
-            font-weight: 400;
-        }
-        .stat-item p { 
-            font-size: 0.85rem; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
-            color: #64748b; 
-            font-weight: 700;
-            margin-top: 1rem; 
-        }
-
-        /* --- SECTIONS --- */
-        .section { padding: 10rem 0; }
-        
-        .section-header { margin-bottom: 6rem; text-align: left; }
-        .section-header h2 { font-size: 3rem; margin-bottom: 1.5rem; color: var(--deep-navy); }
-        .section-header .line { width: 100px; height: 3px; background: var(--gold-accent); }
-
-        /* --- ABOUT --- */
-        .about-content { 
-            display: grid; 
-            grid-template-columns: 1.2fr 0.8fr; 
-            gap: 8rem; 
-            align-items: start; 
-        }
-        
-        .about-text p { 
-            font-size: 1.2rem; 
-            margin-bottom: 2.5rem; 
-            color: #475569; 
-            text-align: justify; 
-            font-weight: 300;
-        }
-
-        .highlight-box {
-            background: var(--rich-blue);
-            color: var(--pure-white);
-            padding: 4rem;
-            position: relative;
-            margin-top: 4rem;
-            overflow: hidden;
-            border-left: 6px solid var(--gold-accent);
-        }
-        /* Abstract Circle Decoration */
-        .highlight-box::after {
-            content: '';
-            position: absolute;
-            top: -60px;
-            right: -60px;
-            width: 250px;
-            height: 250px;
-            border: 2px solid rgba(255,255,255,0.05);
-            border-radius: 50%;
-        }
-        .highlight-box h4 { color: var(--gold-accent); margin-bottom: 1.5rem; letter-spacing: 3px; font-size: 1rem; font-weight: 700;}
-        .highlight-box p { color: #cbd5e1; margin: 0; font-size: 1.1rem; }
-
-        .grid-images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-        .grid-images img { 
-            width: 100%; 
-            height: 280px; 
-            object-fit: cover; 
-            filter: grayscale(100%) contrast(1.1); 
-            transition: 0.6s; 
-        }
-        .grid-images img:hover { filter: grayscale(0%); transform: scale(1.02); }
-
-        /* --- MODULES (DARK MODE) --- */
-        .bg-dark { 
-            background: var(--deep-navy); 
-            color: var(--pure-white); 
-            position: relative;
-        }
-        /* Abstract Background Shape */
-        .bg-dark::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0;
-            width: 40%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02));
-            pointer-events: none;
-        }
-
-        .bg-dark h2 { color: var(--pure-white); }
-        
-        .module-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Wider cards for more text */
-            gap: 3rem;
-        }
-
-        .module-card {
-            background: rgba(255, 255, 255, 0.03); 
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 4rem;
-            transition: 0.5s;
-            position: relative;
-        }
-
-        .module-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: var(--gold-accent);
-            transform: translateY(-10px);
-        }
-
-        .module-number {
-            font-size: 5rem;
-            font-family: 'Playfair Display', serif;
-            color: rgba(255,255,255,0.05);
-            position: absolute;
-            top: 1rem;
-            right: 2rem;
-            font-weight: 700;
-        }
-
-        .module-card h3 { 
-            color: var(--gold-accent); 
-            font-size: 1.8rem; 
-            margin-bottom: 1rem; 
-            margin-top: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .module-meta {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            font-size: 0.85rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 1rem;
-        }
-
-        .module-card p {
-            color: #e2e8f0; /* Clear white-grey for readability */
-            font-size: 1.1rem;
-            margin: 0;
-            font-weight: 300;
-            text-align: justify;
-        }
-
-        /* --- CERTIFICATION --- */
-        .cert-section { text-align: center; padding: 10rem 0; background: var(--pure-white); }
-        .cert-list {
-            display: flex;
-            justify-content: center;
-            gap: 6rem;
-            margin-top: 5rem;
-            flex-wrap: wrap;
-        }
-        .cert-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-        .abstract-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--soft-white);
-            border: 1px solid var(--deep-navy);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.4s;
-            transform: rotate(45deg); /* Diamond shape */
-        }
-        .cert-item:hover .abstract-icon { background: var(--deep-navy); }
-        
-        /* Inner circle */
-        .abstract-icon::after {
-            content: '';
-            width: 30px;
-            height: 30px;
-            background: var(--gold-accent);
-            border-radius: 50%;
-            transform: rotate(-45deg);
-        }
-
-        .cert-item span { 
-            font-weight: 600; 
-            color: var(--deep-navy); 
-            font-size: 1.3rem; 
-            letter-spacing: 1px; 
-            text-transform: uppercase;
-        }
-
-        /* --- FOOTER --- */
-        footer { 
-            background: #050914; /* Black-Navy */
-            color: var(--pure-white); 
-            padding: 8rem 0 4rem; 
-            text-align: center; 
-            border-top: 1px solid #1e293b;
-        }
-        
-        .footer-logos { 
-            display: flex; 
-            justify-content: center; 
-            gap: 5rem; 
-            margin-bottom: 5rem; 
-            align-items: center;
-        }
-        
-        .footer-logos img { 
-            height: 100px; 
-            background: var(--pure-white);
-            padding: 15px;
-            /* No border radius for cleaner look */
-        }
-
-        .footer-info h4 { 
-            color: var(--pure-white); 
-            letter-spacing: 4px; 
-            margin-bottom: 2rem; 
-            font-size: 1.3rem; 
-            font-weight: 400;
-        }
-        
-        .footer-info p { margin: 1rem 0; font-size: 1.2rem; color: #94a3b8; font-weight: 300; }
-        
-        .footer-info strong { 
-            color: var(--pure-white); 
-            font-weight: 600; 
-            border-bottom: 1px solid var(--gold-accent);
-        }
-        
-        .copyright {
-            margin-top: 6rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 3rem;
-            font-size: 0.9rem;
-            color: #475569;
-        }
-
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 2.8rem; }
-            .hero-subtitle { font-size: 1.2rem; }
-            .about-content { grid-template-columns: 1fr; gap: 4rem; }
-            .nav-wrapper { flex-direction: column; gap: 2rem; }
-            .nav-right { flex-direction: column; gap: 1.5rem; }
-            .footer-logos { flex-direction: column; gap: 3rem; }
-            nav ul { flex-direction: column; align-items: center; gap: 1.5rem; }
-            .module-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    }
+    </script>
 </head>
 <body class="lang-gr">
+    <a class="skip-link" href="#main"><span class="show-gr">Μετάβαση στο περιεχόμενο</span><span class="show-en">Skip to content</span></a>
 
-    <header>
+    <header class="site-header">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo-group">
-                    <a href="https://www.uoa.gr" target="_blank">
-                        <img src="assets/logos/EKPA.jpg" alt="ΕΚΠΑ">
+                    <a href="https://www.uoa.gr" target="_blank" rel="noopener">
+                        <img src="assets/logos/EKPA.jpg" alt="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών">
                     </a>
-                    <a href="https://athdgc.github.io" target="_blank">
+                    <a href="https://athdgc.github.io" target="_blank" rel="noopener">
                         <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
                     </a>
                 </div>
                 <div class="nav-right">
-                    <nav>
+                    <nav class="main-nav" aria-label="Κύρια πλοήγηση">
                         <ul>
-                            <li><a href="#about" class="show-gr">ΠΑΡΟΥΣΙΑΣΗ</a><a href="#about" class="show-en">Presentation</a></li>
-                            <li><a href="#curriculum" class="show-gr">ΠΡΟΓΡΑΜΜΑ</a><a href="#curriculum" class="show-en">Program</a></li>
-                            <li><a href="#contact" class="show-gr">ΕΠΙΚΟΙΝΩΝΙΑ</a><a href="#contact" class="show-en">Contact</a></li>
+                            <li><a href="#about"><span class="show-gr">ΤΟ ΠΡΟΓΡΑΜΜΑ</span><span class="show-en">THE PROGRAMME</span></a></li>
+                            <li><a href="#modules"><span class="show-gr">ΕΝΟΤΗΤΕΣ</span><span class="show-en">MODULES</span></a></li>
+                            <li><a href="#apply"><span class="show-gr">ΤΕΛΗ ΚΑΙ ΑΙΤΗΣΗ</span><span class="show-en">FEES AND APPLICATION</span></a></li>
+                            <li><a href="guides/"><span class="show-gr">ΟΔΗΓΟΙ</span><span class="show-en">GUIDES</span></a></li>
+                            <li><a href="blog/"><span class="show-gr">ΙΣΤΟΛΟΓΙΟ</span><span class="show-en">BLOG</span></a></li>
+                            <li><a href="#contact"><span class="show-gr">ΕΠΙΚΟΙΝΩΝΙΑ</span><span class="show-en">CONTACT</span></a></li>
                         </ul>
                     </nav>
-                    <div class="lang-switch">
-                        <button class="lang-btn active" id="btn-gr" onclick="setLanguage('gr')">GR</button>
-                        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+                    <div class="lang-switch" role="group" aria-label="Γλώσσα / Language">
+                        <button type="button" class="lang-btn" data-lang="gr" aria-pressed="true">GR</button>
+                        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <main id="main">
     <section class="hero">
         <div class="hero-content container">
-            <h2 class="show-gr">ΚΕΔΙΒΙΜ ΕΚΠΑ</h2>
-            <h2 class="show-en">NKUA CCE</h2>
-            
-            <h1 class="show-gr">ΨΗΦΙΑΚΗ ΔΙΑΧΡΟΝΙΑ</h1>
-            <h1 class="show-en">DIGITAL DIACHRONY</h1>
-            
-            <p class="hero-subtitle show-gr">
-                Υπολογιστικές Προσεγγίσεις στη Μελέτη της Γλωσσικής Εξέλιξης.<br>
-                Ένα πρωτοποριακό πρόγραμμα που συνδυάζει τη Γλωσσολογία με την Επιστήμη Δεδομένων.
+            <p class="hero-kicker"><span class="show-gr">ΚΕΔΙΒΙΜ ΕΚΠΑ, ΠΡΟΓΡΑΜΜΑ 1829</span><span class="show-en">NKUA CENTER FOR CONTINUING EDUCATION AND LIFELONG LEARNING, PROGRAMME 1829</span></p>
+            <p class="hero-brand"><span class="show-gr">ΨΗΦΙΑΚΗ ΔΙΑΧΡΟΝΙΑ</span><span class="show-en">DIGITAL DIACHRONY</span></p>
+            <h1 class="hero-title"><span class="show-gr">Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας</span><span class="show-en">Digital Tools for the Diachronic Analysis of Language</span></h1>
+            <p class="hero-subtitle">
+                <span class="show-gr">Επιμορφωτικό πρόγραμμα 300 ωρών, ασύγχρονο εξ αποστάσεως, για φιλολόγους, εκπαιδευτικούς και ερευνητές που θέλουν να μελετούν τη γλωσσική αλλαγή με ψηφιακά εργαλεία.</span>
+                <span class="show-en">A 300-hour asynchronous online programme for philologists, teachers and researchers who want to study language change with digital tools. The programme is taught in Greek.</span>
             </p>
-            <p class="hero-subtitle show-en">
-                Computational Approaches to the Study of Language Evolution.<br>
-                A pioneering program bridging Linguistics with Data Science.
-            </p>
-            
-            <a href="https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8" target="_blank" rel="noopener" class="btn-cta">
-                <span class="show-gr">ΑΙΤΗΣΗ ΣΥΜΜΕΤΟΧΗΣ</span>
-                <span class="show-en">APPLY NOW</span>
-            </a>
-            <p class="hero-deadline">
-                <span class="show-gr">Κωδικός ΚΕΔΙΒΙΜ 1829 &middot; Αιτήσεις έως 26 Οκτωβρίου 2026 &middot; Έναρξη 30 Οκτωβρίου 2026</span>
-                <span class="show-en">KEDIVIM code 1829 &middot; Applications close 26 October 2026 &middot; Starts 30 October 2026</span>
+            <div class="hero-actions">
+                <a href="https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8" target="_blank" rel="noopener" class="btn-cta solid">
+                    <span class="show-gr">ΑΙΤΗΣΗ ΣΥΜΜΕΤΟΧΗΣ</span><span class="show-en">APPLY</span>
+                </a>
+                <a href="guides/odigos-spoudon-1829.pdf" class="btn-cta">
+                    <span class="show-gr">ΟΔΗΓΟΣ ΣΠΟΥΔΩΝ (PDF)</span><span class="show-en">STUDY GUIDE (PDF, GREEK)</span>
+                </a>
+            </div>
+            <p class="hero-dates">
+                <span class="show-gr"><span class="d">Αιτήσεις έως <strong>26 Οκτωβρίου 2026</strong></span><span class="d">Έναρξη <strong>30 Οκτωβρίου 2026</strong></span></span>
+                <span class="show-en"><span class="d">Applications close <strong>26 October 2026</strong></span><span class="d">Starts <strong>30 October 2026</strong></span></span>
             </p>
         </div>
     </section>
@@ -548,10 +122,10 @@
     <div class="stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item"><h3>8</h3><p class="show-gr">ΜΗΝΕΣ / MONTHS</p><p class="show-en">MONTHS / ΜΗΝΕΣ</p></div>
-                <div class="stat-item"><h3>5</h3><p class="show-gr">ΔΙΔΑΚΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</p><p class="show-en">TEACHING UNITS</p></div>
-                <div class="stat-item"><h3>300</h3><p class="show-gr">ΩΡΕΣ ΔΙΔΑΣΚΑΛΙΑΣ</p><p class="show-en">TEACHING HOURS</p></div>
-                <div class="stat-item"><h3>100%</h3><p class="show-gr">ΕΞ ΑΠΟΣΤΑΣΕΩΣ</p><p class="show-en">ONLINE LEARNING</p></div>
+                <div class="stat-item"><p class="num">8</p><p class="label"><span class="show-gr">ΜΗΝΕΣ</span><span class="show-en">MONTHS</span></p></div>
+                <div class="stat-item"><p class="num">300</p><p class="label"><span class="show-gr">ΩΡΕΣ ΕΝΑΣΧΟΛΗΣΗΣ</span><span class="show-en">HOURS OF STUDY</span></p></div>
+                <div class="stat-item"><p class="num">5</p><p class="label"><span class="show-gr">ΔΙΔΑΚΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</span><span class="show-en">MODULES</span></p></div>
+                <div class="stat-item"><p class="num">6</p><p class="label"><span class="show-gr">ΕΠΙΠΕΔΟ EQF</span><span class="show-en">EQF LEVEL</span></p></div>
             </div>
         </div>
     </div>
@@ -559,178 +133,399 @@
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="show-gr">ΕΠΙΣΤΗΜΟΝΙΚΟ ΠΛΑΙΣΙΟ</h2>
-                <h2 class="show-en">SCIENTIFIC CONTEXT</h2>
+                <h2><span class="show-gr">Το πρόγραμμα</span><span class="show-en">The programme</span></h2>
                 <div class="line"></div>
             </div>
-            
             <div class="about-content">
-                <div class="about-text">
+                <div class="prose">
                     <div class="show-gr">
-                        <p>Το εκπαιδευτικό πρόγραμμα «Ψηφιακή Διαχρονία» έρχεται να καλύψει ένα σημαντικό κενό στη σύγχρονη ανθρωπιστική έρευνα: τη σύνδεση της ιστορικής γλωσσολογίας με τις ψηφιακές τεχνολογίες. Σε μια εποχή όπου ο όγκος των ψηφιακών δεδομένων αυξάνεται εκθετικά, η ικανότητα ανάλυσης μεγάλων σωμάτων κειμένων (Big Data) καθίσταται απαραίτητη δεξιότητα για τον σύγχρονο ερευνητή.</p>
-                        <p>Μέσα από το πρόγραμμα, οι συμμετέχοντες θα εξοικειωθούν με τη χρήση υπολογιστικών εργαλείων για τη μελέτη της γλωσσικής αλλαγής, κατανοώντας πώς οι γλώσσες εξελίσσονται στον χρόνο μέσω ποσοτικών και ποιοτικών μεθόδων. Από την ανάλυση αρχαίων χειρογράφων έως τη χρήση στατιστικών μοντέλων, το πρόγραμμα προσφέρει μια ολοκληρωμένη επισκόπηση του πεδίου των Ψηφιακών Ανθρωπιστικών Επιστημών.</p>
-                        
-                        <div class="highlight-box">
-                            <h4>ΣΕ ΠΟΙΟΥΣ ΑΠΕΥΘΥΝΕΤΑΙ</h4>
-                            <p>Το πρόγραμμα απευθύνεται σε απόφοιτους Ανθρωπιστικών Επιστημών, φιλολόγους, γλωσσολόγους, ιστορικούς, αλλά και σε επιστήμονες πληροφορικής που επιθυμούν να εξειδικευτούν στην Επεξεργασία Φυσικής Γλώσσας (NLP) με έμφαση στα ιστορικά δεδομένα.</p>
+                        <p>Το πρόγραμμα «Ψηφιακά Εργαλεία για τη Διαχρονική Ανάλυση της Γλώσσας» του Κέντρου Επιμόρφωσης και Διά Βίου Μάθησης του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΚΕΔΙΒΙΜ ΕΚΠΑ) διδάσκει πώς μελετάται η γλωσσική αλλαγή με ψηφιακά εργαλεία και υπολογιστικές μεθόδους. Οι εκπαιδευόμενοι μαθαίνουν να μετατρέπουν ιστορικά κείμενα σε δεδομένα, να τα επισημειώνουν, να τα αναλύουν στατιστικά, να διαχειρίζονται ψηφιακά αρχεία και συλλογές και να σχεδιάζουν δικά τους ερευνητικά έργα.</p>
+                        <p>Η ιδέα που διατρέχει το πρόγραμμα είναι ότι ο τρόπος με τον οποίο επισημειώνεται ένα σώμα κειμένων καθορίζει ποια ερωτήματα μπορούν να τεθούν σε αυτό. Ένα μηδενικό αντικείμενο, για παράδειγμα, στο απλό κείμενο είναι απλώς μια απουσία. Όταν κωδικοποιηθεί, γίνεται δεδομένο που μπορεί να μετρηθεί. Η εργασία γίνεται κυρίως σε πραγματικά κείμενα της ελληνικής διαχρονίας, με τη μεθοδολογία του ερευνητικού προγράμματος PROIEL και του διαχρονικού σώματος κειμένων AthDGC (Athens Digital Glossa Chronos).</p>
+                        <p>Όσοι το επιθυμούν μπορούν, μετά τον ποιοτικό έλεγχο και με τη σύμφωνη γνώμη τους, να εντάξουν επισημειωμένο δείγμα της εργασίας τους στην επόμενη ανοιχτή έκδοση του σώματος AthDGC, με το όνομά τους στους συντελεστές.</p>
+                        <div class="audience">
+                            <h3>ΣΕ ΠΟΙΟΥΣ ΑΠΕΥΘΥΝΕΤΑΙ</h3>
+                            <p>Σε κλασικούς και βυζαντινούς φιλολόγους, νεοελληνιστές και φιλολόγους της αγγλικής, της γερμανικής, της γαλλικής, της ισπανικής, της ιταλικής και άλλων ινδοευρωπαϊκών γλωσσών, σε εκπαιδευτικούς με ενδιαφέρον για ψηφιακές μεθόδους, σε μεταπτυχιακούς φοιτητές γλωσσολογίας, σε ερευνητές των ψηφιακών ανθρωπιστικών επιστημών και σε επαγγελματίες της γλωσσικής τεχνολογίας.</p>
                         </div>
                     </div>
                     <div class="show-en">
-                        <p>The "Digital Diachrony" educational program aims to bridge a significant gap in modern humanities research: the connection between historical linguistics and digital technologies. In an era where the volume of digital data is increasing exponentially, the ability to analyze large text corpora (Big Data) is becoming an essential skill for the modern researcher.</p>
-                        <p>Through this program, participants will familiarize themselves with computational tools for studying language change, understanding how languages evolve over time through quantitative and qualitative methods. From analyzing ancient manuscripts to using statistical models, the program offers a comprehensive overview of the Digital Humanities field.</p>
-                        
-                        <div class="highlight-box">
-                            <h4>TARGET AUDIENCE</h4>
-                            <p>The program is designed for graduates of Humanities, philologists, linguists, historians, as well as computer scientists wishing to specialize in Natural Language Processing (NLP) with a focus on historical data.</p>
+                        <p>The programme "Digital Tools for the Diachronic Analysis of Language", offered by the Center for Continuing Education and Lifelong Learning of the National and Kapodistrian University of Athens (NKUA), teaches how language change is studied with digital tools and computational methods. Participants learn to turn historical texts into data, annotate them, analyse them statistically, manage digital archives and collections, and design research projects of their own.</p>
+                        <p>The idea that runs through the programme is that the way a corpus is annotated decides which questions can be asked of it. A null object, for instance, is simply an absence in plain text. Once it is encoded, it becomes a datum that can be counted. The work is done mainly on real texts from the history of Greek, following the methodology of the PROIEL research project and of the AthDGC diachronic corpus (Athens Digital Glossa Chronos).</p>
+                        <p>Participants who wish to may, after quality control and with their consent, add an annotated sample of their work to the next open release of the AthDGC corpus, with their name among the contributors.</p>
+                        <div class="audience">
+                            <h3>WHO IT IS FOR</h3>
+                            <p>Classical and Byzantine philologists, specialists in Modern Greek, philologists of English, German, French, Spanish, Italian and other Indo-European languages, teachers interested in digital methods, postgraduate students of linguistics, researchers in the digital humanities, and language technology professionals.</p>
                         </div>
                     </div>
                 </div>
                 <div class="grid-images">
-                    <img src="assets/images/2.jpg" alt="Data Visualization">
-                    <img src="assets/images/6.jpg" alt="Research Archives">
-                    <img src="assets/images/7.jpg" alt="Ancient Texts">
-                    <img src="assets/images/8.jpg" alt="Coding for Humanities">
+                    <img src="assets/images/5.jpg" alt="Απόσπασμα από τους Όρκους του Στρασβούργου (842) σε μεταγραφή" data-alt-gr="Απόσπασμα από τους Όρκους του Στρασβούργου (842) σε μεταγραφή" data-alt-en="Passage from the Oaths of Strasbourg (842) in transcription" loading="lazy">
+                    <img src="assets/images/4.jpg" alt="Συχνότητα λέξεων ως προς την κατάταξή τους σε λογαριθμική κλίμακα (νόμος του Zipf)" data-alt-gr="Συχνότητα λέξεων ως προς την κατάταξή τους σε λογαριθμική κλίμακα (νόμος του Zipf)" data-alt-en="Word frequency against rank on logarithmic scales (Zipf's law)" loading="lazy">
+                    <img src="assets/images/3.jpg" alt="Γράφημα δικτύου με ετικέτες λέξεων σε σκούρο φόντο" data-alt-gr="Γράφημα δικτύου με ετικέτες λέξεων σε σκούρο φόντο" data-alt-en="Network graph with word labels on a dark background" loading="lazy">
+                    <img src="assets/images/2-web.jpg" alt="Οθόνη υπολογιστή με κώδικα προγραμματισμού" data-alt-gr="Οθόνη υπολογιστή με κώδικα προγραμματισμού" data-alt-en="Computer screen showing program code" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="curriculum" class="section bg-dark">
+    <section id="modules" class="section bg-dark">
         <div class="container">
             <div class="section-header">
-                <h2 class="show-gr">ΕΚΠΑΙΔΕΥΤΙΚΕΣ ΕΝΟΤΗΤΕΣ</h2>
-                <h2 class="show-en">EDUCATIONAL MODULES</h2>
+                <h2><span class="show-gr">Διδακτικές ενότητες</span><span class="show-en">Modules</span></h2>
                 <div class="line"></div>
             </div>
-
-            <div class="module-grid">
-<div class="module-card">
-    <span class="module-number">01</span>
-    <div class="module-content">
-        <div class="module-meta">CORE THEORY • 60 HOURS</div>
-        <h3 class="show-gr">Θεμέλια Διαχρονικής Γλωσσολογίας</h3>
-        <h3 class="show-en">Foundations of Diachronic Linguistics</h3>
-        <p class="show-gr">Η ενότητα αυτή παρέχει το απαραίτητο θεωρητικό υπόβαθρο. Εξετάζονται οι μηχανισμοί της γλωσσικής αλλαγής (φωνητική, μορφολογική, συντακτική και λεξική αλλαγή), καθώς και η θεωρία της γραμματικοποίησης. Οι φοιτητές μελετούν την εξέλιξη των Ινδοευρωπαϊκών γλωσσών και παραδείγματα από την ιστορία της Ελληνικής, της Αγγλικής και άλλων γλωσσών, αναλύοντας πώς οι κοινωνικοί και ιστορικοί παράγοντες επηρεάζουν τη δομή της γλώσσας.</p>
-        <p class="show-en">This module provides the necessary theoretical background. It examines the mechanisms of language change (phonological, morphological, syntactic, and lexical change) and the theory of grammaticalization. Students study the evolution of Indo-European languages and examples from the history of Greek, English, and other languages, analyzing how social and historical factors influence language structure.</p>
-    </div>
-</div>
-
-                <div class="module-card">
-                    <span class="module-number">02</span>
-                    <div class="module-content">
-                        <div class="module-meta">TECHNICAL SKILLS • 60 HOURS</div>
-                        <h3 class="show-gr">Υπολογιστικές Μέθοδοι & Εργαλεία</h3>
-                        <h3 class="show-en">Computational Methods & Tools</h3>
-                        <p class="show-gr">Εισαγωγή στον προγραμματισμό με Python ειδικά σχεδιασμένη για γλωσσολόγους. Οι συμμετέχοντες μαθαίνουν να διαχειρίζονται ψηφιακά δεδομένα, να χρησιμοποιούν βιβλιοθήκες NLP (όπως NLTK και spaCy), να κάνουν εξόρυξη δεδομένων (web scraping) και να καθαρίζουν κείμενα για ανάλυση. Έμφαση δίνεται στη δημιουργία και διαχείριση γλωσσικών σωμάτων (corpora).</p>
-                        <p class="show-en">Introduction to Python programming specifically designed for linguists. Participants learn to manage digital data, use NLP libraries (such as NLTK and spaCy), perform web scraping, and clean texts for analysis. Emphasis is placed on the creation and management of language corpora.</p>
+            <ol class="module-list">
+                <li class="module">
+                    <div class="module-num">01</div>
+                    <div>
+                        <p class="module-meta"><span class="show-gr"><span class="m">ΔΙΔΑΚΤΙΚΗ ΕΝΟΤΗΤΑ 1</span><span class="m">60 ΩΡΕΣ</span></span><span class="show-en"><span class="m">MODULE 1</span><span class="m">60 HOURS</span></span></p>
+                        <h3><span class="show-gr">Θεμέλια Διαχρονικής Γλωσσολογίας</span><span class="show-en">Foundations of Diachronic Linguistics</span></h3>
+                        <p class="show-gr">Οι μηχανισμοί της γλωσσικής αλλαγής, οι θεωρίες της γραμματικοποίησης και οι φωνητικές και σημασιολογικές μεταβολές, με μελέτες περίπτωσης από την ελληνική και άλλες γλώσσες. Η ενότητα εισάγει επίσης τις βασικές έννοιες της γλωσσολογίας των σωμάτων κειμένων (corpus linguistics).</p>
+                        <p class="show-en">The mechanisms of language change, theories of grammaticalization, and phonetic and semantic change, with case studies from Greek and other languages. The module also introduces the basic concepts of corpus linguistics.</p>
+                        <p class="subunits-label"><span class="show-gr">ΥΠΟΕΝΟΤΗΤΕΣ</span><span class="show-en">UNITS</span></p>
+                        <ul class="subunits show-gr">
+                            <li>Εισαγωγή στη γλωσσική αλλαγή και εξέλιξη</li>
+                            <li>Μηχανισμοί φωνητικής και φωνολογικής αλλαγής</li>
+                            <li>Γραμματικοποίηση και σημασιολογική μεταβολή</li>
+                            <li>Γλωσσολογία των σωμάτων κειμένων για διαχρονική ανάλυση</li>
+                            <li>Μελέτες περίπτωσης από την ελληνική και άλλες γλώσσες</li>
+                        </ul>
+                        <ul class="subunits show-en">
+                            <li>Introduction to language change and evolution</li>
+                            <li>Mechanisms of phonetic and phonological change</li>
+                            <li>Grammaticalization and semantic change</li>
+                            <li>Corpus linguistics for diachronic analysis</li>
+                            <li>Case studies from Greek and other languages</li>
+                        </ul>
                     </div>
+                </li>
+                <li class="module">
+                    <div class="module-num">02</div>
+                    <div>
+                        <p class="module-meta"><span class="show-gr"><span class="m">ΔΙΔΑΚΤΙΚΗ ΕΝΟΤΗΤΑ 2</span><span class="m">60 ΩΡΕΣ</span></span><span class="show-en"><span class="m">MODULE 2</span><span class="m">60 HOURS</span></span></p>
+                        <h3><span class="show-gr">Υπολογιστικές Μέθοδοι και Εργαλεία</span><span class="show-en">Computational Methods and Tools</span></h3>
+                        <p class="show-gr">Προγραμματισμός σε Python και R για γλωσσική ανάλυση, επεξεργασία κειμένων με τις βιβλιοθήκες NLTK και spaCy, κανονικές εκφράσεις (regular expressions) και διαδικτυακή άντληση δεδομένων (web scraping), με πρακτική εφαρμογή σε πραγματικά γλωσσικά δεδομένα.</p>
+                        <p class="show-en">Programming in Python and R for linguistic analysis, text processing with the NLTK and spaCy libraries, regular expressions and web scraping, with practical work on real language data.</p>
+                        <p class="subunits-label"><span class="show-gr">ΥΠΟΕΝΟΤΗΤΕΣ</span><span class="show-en">UNITS</span></p>
+                        <ul class="subunits show-gr">
+                            <li>Βασικές αρχές Python και δομές δεδομένων για φιλολόγους και γλωσσολόγους</li>
+                            <li>Επεξεργασία και ανάλυση κειμένων με Python</li>
+                            <li>Οι βιβλιοθήκες NLTK και spaCy για την επεξεργασία φυσικής γλώσσας</li>
+                            <li>Διαδικτυακή άντληση δεδομένων και διεπαφές προγραμματισμού εφαρμογών (API) για τη συλλογή γλωσσικών δεδομένων</li>
+                            <li>Αυτοματοποίηση ροών εργασίας για γλωσσολογικές εργασίες</li>
+                        </ul>
+                        <ul class="subunits show-en">
+                            <li>Python basics and data structures for philologists and linguists</li>
+                            <li>Text processing and analysis with Python</li>
+                            <li>The NLTK and spaCy libraries for natural language processing</li>
+                            <li>Web scraping and application programming interfaces (APIs) for collecting language data</li>
+                            <li>Automating workflows for linguistic tasks</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="module">
+                    <div class="module-num">03</div>
+                    <div>
+                        <p class="module-meta"><span class="show-gr"><span class="m">ΔΙΔΑΚΤΙΚΗ ΕΝΟΤΗΤΑ 3</span><span class="m">60 ΩΡΕΣ</span></span><span class="show-en"><span class="m">MODULE 3</span><span class="m">60 HOURS</span></span></p>
+                        <h3><span class="show-gr">Στατιστική Ανάλυση και Μοντελοποίηση</span><span class="show-en">Statistical Analysis and Modelling</span></h3>
+                        <p class="show-gr">Περιγραφική στατιστική, έλεγχοι υποθέσεων και μοντέλα παλινδρόμησης για γλωσσικά φαινόμενα, μοντέλα χρονοσειρών για τη γλωσσική εξέλιξη και οπτικοποίηση δεδομένων.</p>
+                        <p class="show-en">Descriptive statistics, hypothesis testing and regression models for linguistic phenomena, time-series models for language change, and data visualization.</p>
+                        <p class="subunits-label"><span class="show-gr">ΥΠΟΕΝΟΤΗΤΕΣ</span><span class="show-en">UNITS</span></p>
+                        <ul class="subunits show-gr">
+                            <li>Οπτικοποίηση με ggplot2 και matplotlib</li>
+                            <li>Περιγραφική στατιστική για γλωσσικά δεδομένα</li>
+                            <li>Έλεγχοι υποθέσεων και στατιστική ανάλυση</li>
+                            <li>Μοντέλα παλινδρόμησης για τη γλωσσική εξέλιξη</li>
+                            <li>Χρονοσειρές και ανάλυση τάσεων</li>
+                        </ul>
+                        <ul class="subunits show-en">
+                            <li>Visualization with ggplot2 and matplotlib</li>
+                            <li>Descriptive statistics for language data</li>
+                            <li>Hypothesis testing and statistical analysis</li>
+                            <li>Regression models for language change</li>
+                            <li>Time series and trend analysis</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="module">
+                    <div class="module-num">04</div>
+                    <div>
+                        <p class="module-meta"><span class="show-gr"><span class="m">ΔΙΔΑΚΤΙΚΗ ΕΝΟΤΗΤΑ 4</span><span class="m">60 ΩΡΕΣ</span></span><span class="show-en"><span class="m">MODULE 4</span><span class="m">60 HOURS</span></span></p>
+                        <h3><span class="show-gr">Εφαρμογές σε Ιστορικές Γλώσσες</span><span class="show-en">Applications to Historical Languages</span></h3>
+                        <p class="show-gr">Ψηφιακή επεξεργασία αρχαίων και μεσαιωνικών κειμένων: οπτική αναγνώριση χαρακτήρων (OCR) σε παλαιές εκδόσεις, διαχείριση του πολυτονικού, κωδικοποίηση κατά το πρότυπο TEI/XML και δημιουργία ψηφιακών κριτικών εκδόσεων.</p>
+                        <p class="show-en">Digital processing of ancient and medieval texts: optical character recognition (OCR) of older printed editions, handling polytonic Greek, encoding to the TEI/XML standard, and building digital critical editions.</p>
+                        <p class="subunits-label"><span class="show-gr">ΥΠΟΕΝΟΤΗΤΕΣ</span><span class="show-en">UNITS</span></p>
+                        <ul class="subunits show-gr">
+                            <li>OCR και ψηφιοποίηση παλαιών εκδόσεων</li>
+                            <li>Διαχείριση του πολυτονικού και ιστορικών γραφών</li>
+                            <li>Κωδικοποίηση TEI/XML για κριτικές εκδόσεις</li>
+                            <li>Ανάπτυξη διαχρονικών σωμάτων κειμένων</li>
+                            <li>Εργαλεία για αρχαία και μεσαιωνικά κείμενα</li>
+                        </ul>
+                        <ul class="subunits show-en">
+                            <li>OCR and digitization of older editions</li>
+                            <li>Polytonic Greek and historical scripts</li>
+                            <li>TEI/XML encoding for critical editions</li>
+                            <li>Building diachronic corpora</li>
+                            <li>Tools for ancient and medieval texts</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="module">
+                    <div class="module-num">05</div>
+                    <div>
+                        <p class="module-meta"><span class="show-gr"><span class="m">ΔΙΔΑΚΤΙΚΗ ΕΝΟΤΗΤΑ 5</span><span class="m">60 ΩΡΕΣ</span></span><span class="show-en"><span class="m">MODULE 5</span><span class="m">60 HOURS</span></span></p>
+                        <h3><span class="show-gr">Ερευνητικό Εργαστήριο και Πρακτική Άσκηση</span><span class="show-en">Research Laboratory and Practical Training</span></h3>
+                        <p class="show-gr">Ανάπτυξη πρωτότυπου ερευνητικού έργου, δημιουργία ανοιχτού συνόλου δεδομένων (dataset) ή εργαλείου, συγγραφή επιστημονικής εργασίας και προετοιμασία της παρουσίασής της σε συνέδριο.</p>
+                        <p class="show-en">An original research project, an open dataset or tool, a scientific paper, and preparing its presentation at a conference.</p>
+                        <p class="subunits-label"><span class="show-gr">ΥΠΟΕΝΟΤΗΤΕΣ</span><span class="show-en">UNITS</span></p>
+                        <ul class="subunits show-gr">
+                            <li>Σχεδιασμός ερευνητικού έργου</li>
+                            <li>Μεθοδολογία και συλλογή δεδομένων</li>
+                            <li>Ανάπτυξη ανοιχτής συλλογής γλωσσικών δεδομένων ή γλωσσικού τεχνολογικού εργαλείου</li>
+                            <li>Συγγραφή επιστημονικής εργασίας</li>
+                            <li>Παρουσίαση και διάχυση των αποτελεσμάτων</li>
+                        </ul>
+                        <ul class="subunits show-en">
+                            <li>Designing a research project</li>
+                            <li>Methodology and data collection</li>
+                            <li>Building an open collection of language data or a language technology tool</li>
+                            <li>Writing a scientific paper</li>
+                            <li>Presenting and disseminating results</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="method" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="show-gr">Πώς λειτουργεί</span><span class="show-en">How it works</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="two-col">
+                <div class="prose">
+                    <p class="show-gr">Η εκπαίδευση είναι ασύγχρονη εξ αποστάσεως: δεν υπάρχουν υποχρεωτικά μαθήματα σε συγκεκριμένες ώρες, και ο καθένας μελετά με τον δικό του ρυθμό μέσα στους οκτώ μήνες του κύκλου, από τις 30 Οκτωβρίου 2026 έως τις 29 Ιουνίου 2027. Οι καταγεγραμμένες διαλέξεις, τα tutorials, οι ασκήσεις και τα φόρουμ συζητήσεων βρίσκονται στην πλατφόρμα Open eClass του ΚΕΔΙΒΙΜ. Η γλώσσα του προγράμματος είναι η ελληνική.</p>
+                    <p class="show-en">Teaching is asynchronous and fully online: there are no compulsory classes at fixed times, and everyone studies at their own pace within the eight months of the cycle, from 30 October 2026 to 29 June 2027. Recorded lectures, tutorials, exercises and discussion forums are on the Center's Open eClass platform.</p>
+                    <p class="show-gr">Για να συμμετάσχει κανείς αρκούν βασικές γνώσεις χειρισμού υπολογιστή, πρόσβαση στο διαδίκτυο και λογαριασμός ηλεκτρονικού ταχυδρομείου. Το πιστοποιητικό απονέμεται με την ολοκλήρωση όλου του ασύγχρονου υλικού, την επιτυχή υποβολή όλων των ασκήσεων με βαθμό τουλάχιστον 5 στα 10 και την τελική ερευνητική εργασία.</p>
+                    <p class="show-en">Basic computer skills, internet access and an e-mail account are all that is needed to take part. The certificate is awarded on completion of all the asynchronous material, successful submission of all exercises with a mark of at least 5 out of 10, and the final research paper.</p>
                 </div>
-
-                <div class="module-card">
-                    <span class="module-number">03</span>
-                    <div class="module-content">
-                        <div class="module-meta">DATA SCIENCE • 60 HOURS</div>
-                        <h3 class="show-gr">Στατιστική Ανάλυση & Μοντελοποίηση</h3>
-                        <h3 class="show-en">Statistical Analysis & Modeling</h3>
-                        <p class="show-gr">Η ενότητα εστιάζει στην ποσοτική έρευνα. Οι φοιτητές εκπαιδεύονται στη χρήση της γλώσσας R για στατιστική ανάλυση. Καλύπτονται θέματα όπως περιγραφική στατιστική, έλεγχοι υποθέσεων, παλινδρόμηση και οπτικοποίηση δεδομένων (ggplot2). Στόχος είναι η ικανότητα εξαγωγής ασφαλών συμπερασμάτων από μεγάλα σύνολα γλωσσικών δεδομένων.</p>
-                        <p class="show-en">This module focuses on quantitative research. Students are trained in using R for statistical analysis. Topics covered include descriptive statistics, hypothesis testing, regression, and data visualization (ggplot2). The goal is to enable the extraction of reliable conclusions from large linguistic datasets.</p>
-                    </div>
-                </div>
-
-                <div class="module-card">
-                    <span class="module-number">04</span>
-                    <div class="module-content">
-                        <div class="module-meta">APPLIED RESEARCH • 60 HOURS</div>
-                        <h3 class="show-gr">Εφαρμογές σε Ιστορικές Γλώσσες</h3>
-                        <h3 class="show-en">Applications in Historical Languages</h3>
-                        <p class="show-gr">Πρακτική εφαρμογή των ψηφιακών εργαλείων σε ιστορικά κείμενα. Περιλαμβάνει την ψηφιοποίηση (OCR) παλαιών εκδόσεων, τη διαχείριση πολυτονικών κειμένων, την κωδικοποίηση κειμένων με το πρότυπο TEI/XML και τη δημιουργία ψηφιακών κριτικών εκδόσεων. Εξετάζονται επίσης ζητήματα ψηφιακής παλαιογραφίας.</p>
-                        <p class="show-en">Practical application of digital tools to historical texts. Includes digitization (OCR) of old editions, management of polytonic texts, text encoding with the TEI/XML standard, and the creation of digital critical editions. Issues of digital paleography are also examined.</p>
-                    </div>
-                </div>
-
-                <div class="module-card">
-                    <span class="module-number">05</span>
-                    <div class="module-content">
-                        <div class="module-meta">FINAL PROJECT • 60 HOURS</div>
-                        <h3 class="show-gr">Ερευνητικό Εργαστήριο και Πρακτική Άσκηση</h3>
-                        <h3 class="show-en">Research Lab</h3>
-                        <p class="show-gr">Η τελική ενότητα συνθέτει όλες τις γνώσεις. Οι εκπαιδευόμενοι αναλαμβάνουν ένα πρωτότυπο ερευνητικό έργο υπό την επίβλεψη των διδασκόντων. Το έργο μπορεί να είναι η δημιουργία ενός νέου γλωσσικού πόρου (dataset), η ανάπτυξη ενός εργαλείου λογισμικού ή η συγγραφή μιας επιστημονικής εργασίας προς δημοσίευση.</p>
-                        <p class="show-en">The final module synthesizes all knowledge. Trainees undertake an original research project under the supervision of instructors. The project can be the creation of a new linguistic resource (dataset), the development of a software tool, or the writing of a scientific paper for publication.</p>
-                    </div>
+                <div class="table-wrap">
+                    <table class="rule-table">
+                        <caption><span class="show-gr">Αξιολόγηση</span><span class="show-en">Assessment</span></caption>
+                        <thead>
+                            <tr><th scope="col"><span class="show-gr">ΣΚΕΛΟΣ</span><span class="show-en">COMPONENT</span></th><th scope="col" class="num"><span class="show-gr">ΒΑΡΟΣ</span><span class="show-en">WEIGHT</span></th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="show-gr">Πρακτικές ασκήσεις</span><span class="show-en">Practical exercises</span></td><td class="num">40%</td></tr>
+                            <tr><td><span class="show-gr">Ομαδικές εργασίες (projects) ανά ενότητα</span><span class="show-en">Group projects in each module</span></td><td class="num">20%</td></tr>
+                            <tr><td><span class="show-gr">Τελική ερευνητική εργασία</span><span class="show-en">Final research paper</span></td><td class="num">40%</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="cert-section">
+    <section id="certificate" class="section">
         <div class="container">
-            <h3 class="show-gr">ΠΙΣΤΟΠΟΙΗΣΗ ΣΠΟΥΔΩΝ</h3>
-            <h3 class="show-en">CERTIFICATION</h3>
-            <div class="cert-list">
-                <div class="cert-item">
-                    <div class="abstract-icon"></div>
-                    <span class="show-gr">Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης ΚΕΔΙΒΙΜ ΕΚΠΑ</span>
-                    <span class="show-en">NKUA Certificate of Specialized Training</span>
+            <div class="section-header">
+                <h2><span class="show-gr">Πιστοποίηση και μοριοδότηση</span><span class="show-en">Certification and credit</span></h2>
+                <div class="line"></div>
+            </div>
+            <ul class="cert-facts">
+                <li><span class="big"><span class="show-gr">Πιστοποιητικό Εξειδικευμένης Επιμόρφωσης</span><span class="show-en">Certificate of Specialized Training</span></span><span class="small"><span class="show-gr">από το ΚΕΔΙΒΙΜ ΕΚΠΑ</span><span class="show-en">issued by the NKUA Center for Continuing Education and Lifelong Learning</span></span></li>
+                <li><span class="big"><span class="show-gr">Επίπεδο 6</span><span class="show-en">Level 6</span></span><span class="small"><span class="show-gr">του Ευρωπαϊκού Πλαισίου Προσόντων για τη Διά Βίου Μάθηση</span><span class="show-en">of the European Qualifications Framework for Lifelong Learning</span></span></li>
+            </ul>
+            <p class="show-gr section-lead" style="margin-bottom:1.5rem;">Σύμφωνα με την επίσημη σελίδα του, το πρόγραμμα ανταποκρίνεται στις προϋποθέσεις μοριοδότησης ως εξής:</p>
+            <p class="show-en section-lead" style="margin-bottom:1.5rem;">According to the official programme page, the programme meets the requirements for credit in the following Greek public-education procedures:</p>
+            <ul class="points show-gr">
+                <li><strong>Δύο (2) μόρια</strong> σε υποψηφίους για διορισμό ως μόνιμοι εκπαιδευτικοί στη γενική εκπαίδευση, στην ειδική αγωγή και ως ειδικό εκπαιδευτικό προσωπικό, ν. 4589/2019 (ΦΕΚ 13/Α/29.1.2019).</li>
+                <li><strong>Δύο (2) μόρια</strong> σε υποψηφίους για διορισμό ως αναπληρωτές εκπαιδευτικοί και ειδικό εκπαιδευτικό προσωπικό μέσω του Ανώτατου Συμβουλίου Επιλογής Προσωπικού (ΑΣΕΠ), ν. 4589/2019 (ΦΕΚ 13/Α/29.1.2019).</li>
+                <li><strong>Δέκα (10) μόρια</strong> σε υποψηφίους για τους κλάδους εκπαιδευτικών των κατηγοριών ΤΕ και ΔΕ της γενικής εκπαίδευσης και της ειδικής αγωγής και εκπαίδευσης, ΥΑ 48190/Ε1 (ΦΕΚ 1088/Β/2.4.2019).</li>
+                <li><strong>Ένα (1) έως δύο (2) μόρια</strong> στην επιλογή περιφερειακών διευθυντών εκπαίδευσης, διευθυντών πρωτοβάθμιας και δευτεροβάθμιας εκπαίδευσης, προϊσταμένων των Κέντρων Διεπιστημονικής Αξιολόγησης, Συμβουλευτικής και Υποστήριξης, συμβούλων εκπαίδευσης και διευθυντών ή προϊσταμένων των τμημάτων εκπαιδευτικών θεμάτων, ν. 4823/2021 (ΦΕΚ 136/Α/3.8.2021).</li>
+            </ul>
+            <ul class="points show-en">
+                <li><strong>Two (2) points</strong> for candidates for permanent teaching posts in general education and special education, and as special educational staff, Law 4589/2019 (Government Gazette 13/A/29.1.2019).</li>
+                <li><strong>Two (2) points</strong> for candidates for substitute teaching posts and special educational staff through the Supreme Council for Civil Personnel Selection (ASEP), Law 4589/2019 (Government Gazette 13/A/29.1.2019).</li>
+                <li><strong>Ten (10) points</strong> for candidates in the TE and DE categories of teaching staff in general and special education, Ministerial Decision 48190/E1 (Government Gazette 1088/B/2.4.2019).</li>
+                <li><strong>One (1) to two (2) points</strong> in the selection of regional education directors, directors of primary and secondary education, heads of the Centres for Interdisciplinary Assessment, Counselling and Support, education advisers and heads of educational affairs departments, Law 4823/2021 (Government Gazette 136/A/3.8.2021).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="apply" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="show-gr">Τέλη και αίτηση</span><span class="show-en">Fees and application</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="two-col">
+                <div>
+                    <p class="show-gr section-lead">Τα τέλη παρακολούθησης είναι <strong>500 €</strong> και καταβάλλονται σε έως <strong>4 δόσεις</strong>. Με εφάπαξ πληρωμή το ποσό είναι <strong>475 €</strong>. Ο πίνακας δείχνει τις κατηγορίες μερικής απαλλαγής όπως αναγράφονται στην επίσημη σελίδα του προγράμματος.</p>
+                    <p class="show-en section-lead">The fee is <strong>500 €</strong>, payable in up to <strong>4 instalments</strong>. Paid in a single instalment, it is <strong>475 €</strong>. The table shows the categories of partial fee waiver as listed on the official programme page.</p>
+                    <div class="table-wrap">
+                        <table class="rule-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span class="show-gr">ΚΑΤΗΓΟΡΙΑ</span><span class="show-en">CATEGORY</span></th>
+                                    <th scope="col" class="num"><span class="show-gr">ΕΚΠΤΩΣΗ</span><span class="show-en">REDUCTION</span></th>
+                                    <th scope="col" class="num"><span class="show-gr">ΤΕΛΗ</span><span class="show-en">FEE</span></th>
+                                    <th scope="col" class="num"><span class="show-gr">ΕΦΑΠΑΞ</span><span class="show-en">SINGLE</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><span class="show-gr">Άτομα με ειδικές ανάγκες</span><span class="show-en">Persons with disabilities</span></td><td class="num">50%</td><td class="num">250 €</td><td class="num">238 €</td></tr>
+                                <tr><td><span class="show-gr">Άνεργοι, γονείς τέκνων με ειδικές ανάγκες, άτομα με ετήσιο εισόδημα κάτω από 12.000 €</span><span class="show-en">Unemployed persons, parents of children with disabilities, annual income below 12,000 €</span></td><td class="num">30%</td><td class="num">350 €</td><td class="num">333 €</td></tr>
+                                <tr><td><span class="show-gr">Πρόσφυγες και μετανάστες</span><span class="show-en">Refugees and migrants</span></td><td class="num">25%</td><td class="num">375 €</td><td class="num">356 €</td></tr>
+                                <tr><td><span class="show-gr">Κάτοικοι περιοχών που έχουν κηρυχθεί σε κατάσταση έκτακτης ανάγκης λόγω φυσικών καταστροφών, εκπαιδευόμενοι που έχουν παρακολουθήσει ή παρακολουθούν επιμορφωτικό πρόγραμμα του ΕΚΠΑ</span><span class="show-en">Residents of areas declared in a state of emergency after natural disasters; past or current participants in an NKUA training programme</span></td><td class="num">20%</td><td class="num">400 €</td><td class="num">380 €</td></tr>
+                                <tr><td><span class="show-gr">Απόφοιτοι τριτοβάθμιας εκπαίδευσης σχολών Παιδαγωγικών, Ανθρωπιστικών και Θετικών Επιστημών και κάτοχοι διδακτικής/παιδαγωγικής επάρκειας, υπάλληλοι του δημόσιου τομέα</span><span class="show-en">Graduates of schools of education, the humanities or the sciences and holders of a teaching or pedagogical qualification, public-sector employees</span></td><td class="num">15%</td><td class="num">425 €</td><td class="num">404 €</td></tr>
+                                <tr><td><span class="show-gr">Γονείς μονογονεϊκών οικογενειών με ετήσιο εισόδημα κάτω από 15.000 €</span><span class="show-en">Single parents with annual income below 15,000 €</span></td><td class="num">10%</td><td class="num">450 €</td><td class="num">428 €</td></tr>
+                                <tr><td><span class="show-gr">Άτομα ηλικίας άνω των 65 ετών</span><span class="show-en">Persons over 65</span></td><td class="num">5%</td><td class="num">475 €</td><td class="num">451 €</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="note show-gr">Για τα δικαιολογητικά κάθε κατηγορίας απευθυνθείτε στη Γραμματεία του ΚΕΔΙΒΙΜ. Για κάθε λεπτομέρεια ισχύει η επίσημη σελίδα του προγράμματος.</p>
+                    <p class="note show-en">For the documents each category requires, contact the Center's secretariat. The official programme page governs every detail.</p>
                 </div>
-                <div class="cert-item">
-                    <div class="abstract-icon"></div>
-                    <span class="show-gr">Επίπεδο 6 του Ευρωπαϊκού Πλαισίου Προσόντων</span>
-                    <span class="show-en">Level 6 of the European Qualifications Framework</span>
-                </div>
-                <div class="cert-item">
-                    <div class="abstract-icon"></div>
-                    <span class="show-gr">Μοριοδότηση σε διορισμούς και πίνακες αναπληρωτών</span>
-                    <span class="show-en">Credit in Greek public-education appointment procedures</span>
+                <div>
+                    <h3 style="font-size:1.6rem;margin-bottom:1.4rem;"><span class="show-gr">Η αίτηση σε τρία βήματα</span><span class="show-en">Applying in three steps</span></h3>
+                    <ol class="steps show-gr">
+                        <li>Ανοίξτε την <a href="https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8" target="_blank" rel="noopener">επίσημη σελίδα του προγράμματος</a> στο ΚΕΔΙΒΙΜ ΕΚΠΑ και πατήστε «Κάνε Αίτηση».</li>
+                        <li>Επιλέξτε τον «1ο Κύκλο». Θα μεταφερθείτε στην Κυβέλη, την πλατφόρμα εκπαιδευομένων του ΚΕΔΙΒΙΜ.</li>
+                        <li>Συνδεθείτε στον λογαριασμό σας στην Κυβέλη ή δημιουργήστε νέο και ολοκληρώστε την αίτηση. Οδηγίες για τη δημιουργία λογαριασμού και τη σύνδεση υπάρχουν στην αρχική σελίδα της Κυβέλης.</li>
+                    </ol>
+                    <ol class="steps show-en">
+                        <li>Open the <a href="https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8" target="_blank" rel="noopener">official programme page</a> at the NKUA Center for Continuing Education and Lifelong Learning and select "Apply".</li>
+                        <li>Choose the 1st cycle. You will be taken to Cybele, the Center's learner platform.</li>
+                        <li>Log in to your Cybele account or create a new one, and complete the application. Instructions for creating an account and logging in are on the Cybele home page.</li>
+                    </ol>
+                    <p class="show-gr" style="margin-top:1rem;"><a class="btn-cta solid" href="https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8" target="_blank" rel="noopener">ΑΙΤΗΣΗ ΣΥΜΜΕΤΟΧΗΣ</a></p>
+                    <p class="show-en" style="margin-top:1rem;"><a class="btn-cta solid" href="https://cce.uoa.gr/courses-detailed/ab9bf254-1eb7-47a3-b3f2-ca1bd76e00a8" target="_blank" rel="noopener">APPLY</a></p>
+                    <p class="note show-gr" style="margin-top:1.5rem;">Ο <a href="https://cybele.cce.uoa.gr/create-multi-cycle-request/cycle/6453ec24-ffd1-4751-9b76-6e6533030c23" target="_blank" rel="noopener">απευθείας σύνδεσμος της αίτησης στην Κυβέλη</a> οδηγεί στη σύνδεση ή στη δημιουργία λογαριασμού και από εκεί κατευθείαν στην αίτηση για τον πρώτο κύκλο.</p>
+                    <p class="note show-en" style="margin-top:1.5rem;">The <a href="https://cybele.cce.uoa.gr/create-multi-cycle-request/cycle/6453ec24-ffd1-4751-9b76-6e6533030c23" target="_blank" rel="noopener">direct application link on Cybele</a> takes you to log in or create an account, and from there straight to the application for the first cycle.</p>
+                    <p class="note show-gr" style="margin-top:1rem;">Ο <a href="guides/odigos-aitisis-1829.pdf">Οδηγός Αίτησης (PDF)</a> συγκεντρώνει τα βήματα, τα τέλη και τις επαφές σε ένα έντυπο.</p>
+                    <p class="note show-en" style="margin-top:1rem;">The <a href="guides/odigos-aitisis-1829.pdf">Application Guide (PDF, in Greek)</a> brings the steps, fees and contacts together in one document.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer id="contact">
+    <section id="faq" class="section">
+        <div class="container narrow">
+            <div class="section-header">
+                <h2><span class="show-gr">Συχνές ερωτήσεις</span><span class="show-en">Frequently asked questions</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="faq show-gr">
+                <details>
+                    <summary>Χρειάζομαι γνώσεις προγραμματισμού;</summary>
+                    <p>Όχι. Το πρόγραμμα δεν προϋποθέτει προηγούμενη εμπειρία στον προγραμματισμό. Η Python διδάσκεται από τις βασικές αρχές της στη δεύτερη διδακτική ενότητα.</p>
+                </details>
+                <details>
+                    <summary>Πόσο χρόνο χρειάζεται την εβδομάδα;</summary>
+                    <p>Οι 300 ώρες κατανέμονται σε οκτώ μήνες, δηλαδή περίπου 35 εβδομάδες. Κατά μέσο όρο αυτό αντιστοιχεί σε 8 έως 9 ώρες την εβδομάδα.</p>
+                </details>
+                <details>
+                    <summary>Τι υπολογιστή και λογισμικό χρειάζομαι;</summary>
+                    <p>Έναν υπολογιστή με Windows, macOS ή Linux και σύνδεση στο διαδίκτυο. Τα βασικά εργαλεία του προγράμματος, όπως η Python, η R, το NLTK και το spaCy, είναι ελεύθερο λογισμικό και διατίθενται δωρεάν. Οδηγίες εγκατάστασης δίνονται στην πλατφόρμα του προγράμματος.</p>
+                </details>
+                <details>
+                    <summary>Είναι κατάλληλο για φιλολόγους ξένων γλωσσών;</summary>
+                    <p>Ναι. Οι μελέτες περίπτωσης προέρχονται από την ελληνική και από άλλες γλώσσες, και τα εργαλεία που διδάσκονται, από την Python και το spaCy έως το πρότυπο TEI/XML, χρησιμοποιούνται για κείμενα σε πολλές γλώσσες.</p>
+                </details>
+            </div>
+            <div class="faq show-en">
+                <details>
+                    <summary>Do I need programming experience?</summary>
+                    <p>No. The programme does not assume any previous programming experience. Python is taught from first principles in the second module.</p>
+                </details>
+                <details>
+                    <summary>How much time does it take each week?</summary>
+                    <p>The 300 hours are spread over eight months, about 35 weeks. On average this comes to 8 to 9 hours a week.</p>
+                </details>
+                <details>
+                    <summary>What computer and software do I need?</summary>
+                    <p>A computer running Windows, macOS or Linux, and an internet connection. The main tools of the programme, such as Python, R, NLTK and spaCy, are free and open-source software. Installation instructions are provided on the programme platform.</p>
+                </details>
+                <details>
+                    <summary>Is it suitable for philologists of other languages?</summary>
+                    <p>Yes. Case studies come from Greek and from other languages, and the tools taught, from Python and spaCy to the TEI/XML standard, are used for texts in many languages.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2><span class="show-gr">Οδηγοί και ιστολόγιο</span><span class="show-en">Guides and blog</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="two-col">
+                <div>
+                    <h3 style="font-size:1.5rem;"><a href="guides/" style="text-decoration:none;"><span class="show-gr">Οδηγοί σε PDF</span><span class="show-en">Guides in PDF</span></a></h3>
+                    <p class="show-gr" style="color:var(--ink-soft);">Ο Ενημερωτικός Οδηγός Σπουδών, ο Οδηγός Αίτησης και ένα μονοσέλιδο ενημερωτικό φυλλάδιο για εκτύπωση ή αποστολή.</p>
+                    <p class="show-en" style="color:var(--ink-soft);">The Study Guide, the Application Guide, and a one-page leaflet for printing or sharing. All are in Greek.</p>
+                    <a class="more" href="guides/"><span class="show-gr">ΟΛΟΙ ΟΙ ΟΔΗΓΟΙ</span><span class="show-en">ALL GUIDES</span></a>
+                </div>
+                <div>
+                    <h3 style="font-size:1.5rem;"><a href="blog/" style="text-decoration:none;"><span class="show-gr">Ιστολόγιο</span><span class="show-en">Blog</span></a></h3>
+                    <p class="show-gr" style="color:var(--ink-soft);">Ανακοινώσεις του προγράμματος και σύντομα κείμενα για τις μεθόδους που διδάσκονται.</p>
+                    <p class="show-en" style="color:var(--ink-soft);">Programme announcements and short pieces on the methods taught. Posts are in Greek.</p>
+                    <a class="more" href="blog/"><span class="show-gr">ΟΛΕΣ ΟΙ ΑΝΑΡΤΗΣΕΙΣ</span><span class="show-en">ALL POSTS</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
         <div class="container">
             <div class="footer-logos">
-                <a href="https://www.uoa.gr" target="_blank">
-                    <img src="assets/logos/EKPA.jpg" alt="NKUA">
-                </a>
-                <a href="https://athdgc.github.io" target="_blank">
-                    <img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC">
-                </a>
+                <a href="https://www.uoa.gr" target="_blank" rel="noopener"><img src="assets/logos/EKPA.jpg" alt="Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών"></a>
+                <a href="https://athdgc.github.io" target="_blank" rel="noopener"><img src="assets/logos/athdgc-favicon.jpg" alt="AthDGC"></a>
             </div>
-            
             <div class="footer-info">
-                <h4 class="show-gr">ΕΘΝΙΚΟ ΚΑΙ ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ</h4>
-                <h4 class="show-en">NATIONAL AND KAPODISTRIAN UNIVERSITY OF ATHENS</h4>
-                
-                <p class="show-gr">Τμήμα Αγγλικής Γλώσσας και Φιλολογίας</p>
-                <p class="show-en">Department of English Language and Literature</p>
-                
-                <div style="margin-top: 4rem;">
-                    <p class="show-gr" style="opacity: 0.7; font-size: 0.9rem; letter-spacing: 2px;">ΕΠΙΣΤΗΜΟΝΙΚΟΣ ΥΠΕΥΘΥΝΟΣ</p>
-                    <p class="show-en" style="opacity: 0.7; font-size: 0.9rem; letter-spacing: 2px;">ACADEMIC DIRECTOR</p>
-                    
-                    <p class="show-gr" style="font-size: 1.4rem;"><strong>Νικόλαος Λαβίδας</strong></p>
-                    <p class="show-en" style="font-size: 1.4rem;"><strong>Nikolaos Lavidas</strong></p>
-                    
-                    <p style="font-style: italic;">
-                        <span class="show-gr">Καθηγητής Διαχρονικής Γλωσσολογίας</span>
-                        <span class="show-en">Professor of Diachronic Linguistics</span>
-                    </p>
-                    <p><a href="mailto:nlavidas@enl.uoa.gr" style="color: var(--gold-accent); text-decoration: none;">nlavidas@enl.uoa.gr</a></p>
+                <h2><span class="show-gr">ΕΘΝΙΚΟ ΚΑΙ ΚΑΠΟΔΙΣΤΡΙΑΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΑΘΗΝΩΝ</span><span class="show-en">NATIONAL AND KAPODISTRIAN UNIVERSITY OF ATHENS</span></h2>
+                <p class="show-gr">Φιλοσοφική Σχολή, Τμήμα Αγγλικής Γλώσσας και Φιλολογίας, Τομέας Γλώσσας-Γλωσσολογίας</p>
+                <p class="show-gr">Εργαστήριο Διαχρονικής Γλωσσολογίας και Γλωσσικής Αλλαγής AthDGC</p>
+                <p class="show-gr">Κέντρο Επιμόρφωσης και Διά Βίου Μάθησης, κωδικός προγράμματος 1829</p>
+                <p class="show-en">Faculty of Philosophy, Department of English Language and Literature, Division of Language-Linguistics</p>
+                <p class="show-en">AthDGC Laboratory for Diachronic Linguistics and Language Change</p>
+                <p class="show-en">Center for Continuing Education and Lifelong Learning, programme code 1829</p>
+
+                <div class="footer-contacts">
+                    <div>
+                        <h3><span class="show-gr">ΣΠΟΥΔΕΣ ΚΑΙ ΠΕΡΙΕΧΟΜΕΝΟ</span><span class="show-en">STUDIES AND CONTENT</span></h3>
+                        <p><span class="show-gr">Νικόλαος Λαβίδας, Καθηγητής Διαχρονικής Γλωσσολογίας</span><span class="show-en">Nikolaos Lavidas, Professor of Diachronic Linguistics</span></p>
+                        <p><span class="show-gr">Ακαδημαϊκός Υπεύθυνος του προγράμματος</span><span class="show-en">Academic Head of the programme</span></p>
+                        <p><a href="mailto:nlavidas@enl.uoa.gr">nlavidas@enl.uoa.gr</a></p>
+                        <p><span class="show-gr">Τηλ. 210 7277462</span><span class="show-en">Tel. +30 210 7277462</span></p>
+                    </div>
+                    <div>
+                        <h3><span class="show-gr">ΑΙΤΗΣΕΙΣ, ΤΕΛΗ, ΔΙΚΑΙΟΛΟΓΗΤΙΚΑ</span><span class="show-en">APPLICATIONS, FEES, DOCUMENTS</span></h3>
+                        <p><span class="show-gr">Γραμματεία ΚΕΔΙΒΙΜ ΕΚΠΑ</span><span class="show-en">Secretariat of the Center</span></p>
+                        <p><a href="mailto:secr-cce@uoa.gr">secr-cce@uoa.gr</a></p>
+                        <p><span class="show-gr">Τηλ. 210 3689543 και 210 3689544</span><span class="show-en">Tel. +30 210 3689543 and +30 210 3689544</span></p>
+                        <p><span class="show-gr">Δευτέρα έως Παρασκευή, 09:00 έως 17:00, εκτός επίσημων αργιών</span><span class="show-en">Monday to Friday, 09:00 to 17:00, except public holidays</span></p>
+                    </div>
+                    <div>
+                        <h3><span class="show-gr">ΚΥΒΕΛΗ ΚΑΙ OPEN ECLASS</span><span class="show-en">CYBELE AND OPEN ECLASS</span></h3>
+                        <p><span class="show-gr">Υποστήριξη Πληροφοριακών Συστημάτων</span><span class="show-en">Information Systems Support</span></p>
+                        <p><a href="mailto:ithelp-cce@uoa.gr">ithelp-cce@uoa.gr</a></p>
+                    </div>
                 </div>
 
                 <div class="copyright">
-                    &copy; 2026 AthDGC Research Network. All rights reserved.
+                    <span class="show-gr">&copy; 2026 Εργαστήριο Διαχρονικής Γλωσσολογίας και Γλωσσικής Αλλαγής AthDGC, ΕΚΠΑ</span>
+                    <span class="show-en">&copy; 2026 AthDGC Laboratory for Diachronic Linguistics and Language Change, NKUA</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        function setLanguage(lang) {
-            document.body.className = 'lang-' + lang;
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-    </script>
+    <script src="assets/js/lang.js"></script>
 </body>
 </html>
